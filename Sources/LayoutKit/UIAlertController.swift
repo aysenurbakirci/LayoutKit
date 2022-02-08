@@ -18,8 +18,9 @@ public extension UIAlertController {
                        preferredStyle: Style = .alert,
                        actions: [UIAlertAction] = [],
                        textFields: [((UITextField) -> ())]? = []) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
-
+        let alertController = UIAlertController(title: title,
+                                                message: message,
+                                                preferredStyle: preferredStyle)
         actions.forEach { action in
             alertController.addAction(action)
         }

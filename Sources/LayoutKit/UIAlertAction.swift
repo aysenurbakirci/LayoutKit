@@ -16,7 +16,9 @@ public extension UIAlertAction {
     static func createAction(title: String? = nil,
                              style: Style = .default,
                              handler: ((UIAlertAction) -> ())? = nil) -> UIAlertAction {
-        let action = UIAlertAction(title: title, style: style, handler: handler)
+        let action = UIAlertAction(title: title,
+                                   style: style,
+                                   handler: handler)
         return action
     }
 }

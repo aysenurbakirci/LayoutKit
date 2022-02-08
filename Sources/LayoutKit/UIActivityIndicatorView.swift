@@ -20,7 +20,6 @@ public extension UIActivityIndicatorView {
         
         indicator.hidesWhenStopped = hidesWhenStopped
         indicator.color = color
-        
         if #available(iOS 13.0, *), let style = style {
             indicator.style = style
         }
