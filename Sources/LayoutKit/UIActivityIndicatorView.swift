@@ -14,7 +14,7 @@ public extension UIActivityIndicatorView {
      Create UIActivityIndicatorView
      */
     static func create(hidesWhenStopped: Bool,
-                       style: UIActivityIndicatorView.Style? = nil,
+                       style: Style? = nil,
                        color: UIColor = .gray) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView()
         
