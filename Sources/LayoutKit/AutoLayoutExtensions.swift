@@ -1,5 +1,5 @@
 //
-//  AutoLayoutViewExtensions.swift
+//  AutoLayoutExtensions.swift
 //  
 //
 //  Created by Ayşenur Bakırcı on 7.02.2022.
@@ -368,7 +368,6 @@ public extension UIView {
 }
 
 //MARK: - SafeArea Anchor
-@available(iOS 11.0, *)
 public extension UIView {
     
     /**
