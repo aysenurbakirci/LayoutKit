@@ -43,6 +43,10 @@ public extension UICollectionView {
 
 //MARK: - UICollectionView dequeue cell
 extension UICollectionView {
+    
+    /**
+     Dequeue UICollectionViewCell
+     */
     func dequeue<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
