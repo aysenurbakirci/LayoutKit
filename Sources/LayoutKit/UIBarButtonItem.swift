@@ -25,22 +25,6 @@ public extension UIBarButtonItem {
     }
     
     /**
-     Create UIBarButtonItem with image.
-     */
-    static func create(image: UIImage? = nil,
-                       style: Style = .done,
-                       target: Any? = nil,
-                       tintColor: UIColor = .black,
-                       action: Selector? = nil) -> UIBarButtonItem {
-        let barButton = UIBarButtonItem(image: image,
-                                        style: style,
-                                        target: target,
-                                        action: action)
-        barButton.tintColor = tintColor
-        return barButton
-    }
-    
-    /**
      Create UIBarButtonItem with title.
      */
     static func create(title: String? = nil,
