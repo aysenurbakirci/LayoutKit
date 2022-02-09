@@ -28,7 +28,6 @@ public extension UICollectionView {
         collectionView.showsHorizontalScrollIndicator = showHorizontalIndicator
         collectionView.showsVerticalScrollIndicator = showVerticalIndicator
         collectionView.register(cell.self, forCellWithReuseIdentifier: cell.reuseIdentifier)
-        
         if let header = header {
             collectionView.register(header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: header.reuseIdentifier)
         }
