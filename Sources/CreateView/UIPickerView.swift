@@ -19,12 +19,14 @@ public extension UIPickerView {
                        isOpaque: Bool = true,
                        tamic: Bool = true) -> UIPickerView {
         let picker = UIPickerView()
+        
         picker.delegate = source
         picker.dataSource = source
         picker.backgroundColor = backgroundColor
         picker.tintColor = tintColor
         picker.isOpaque = isOpaque
         picker.translatesAutoresizingMaskIntoConstraints = tamic
+        
         return picker
     }
 }

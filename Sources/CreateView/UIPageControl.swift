@@ -31,6 +31,7 @@ extension UIPageControl {
         pageControl.hidesForSinglePage = hidesForSinglePage
         pageControl.isOpaque = isOpaque
         pageControl.translatesAutoresizingMaskIntoConstraints = tamic
+        
         return pageControl
     }
 }
