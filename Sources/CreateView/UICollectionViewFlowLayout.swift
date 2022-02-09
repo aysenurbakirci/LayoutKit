@@ -20,14 +20,16 @@ public extension UICollectionViewFlowLayout {
                        lineSpacing: CGFloat = .leastNormalMagnitude,
                        sectionInset: UIEdgeInsets = .zero) -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
+        
         layout.scrollDirection = scrollDirection
         layout.itemSize = itemSize
         layout.minimumInteritemSpacing = interItemSpacing
         layout.minimumLineSpacing = lineSpacing
         layout.sectionInset = sectionInset
+        layout.footerReferenceSize = footerSize
+        layout.headerReferenceSize = headerSize
         layout.invalidateLayout()
-        layout.footerReferenceSize = .zero
-        layout.headerReferenceSize = .zero
+        
         return layout
     }
     

@@ -23,8 +23,9 @@ public extension UILabel {
                        textAlignment: NSTextAlignment = .left,
                        lineBreakMode: NSLineBreakMode? = nil,
                        isUserInteractionEnabled: Bool = false,
-                       isTamic: Bool = true) -> UILabel {
+                       tamic: Bool = true) -> UILabel {
         let label = UILabel()
+        
         label.text = text
         label.attributedText = attributedText
         label.textAlignment = textAlignment
@@ -34,10 +35,13 @@ public extension UILabel {
         label.backgroundColor = backgroundColor
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled
+        
         if let lineBreakMode = lineBreakMode {
             label.lineBreakMode = lineBreakMode
         }
-        label.translatesAutoresizingMaskIntoConstraints = true
+        
+        label.translatesAutoresizingMaskIntoConstraints = tamic
+        
         return label
     }
 }
