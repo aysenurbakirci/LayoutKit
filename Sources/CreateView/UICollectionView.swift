@@ -20,7 +20,7 @@ public extension UICollectionView {
                                  backgroundColor: UIColor = .clear,
                                  showHorizontalIndicator: Bool = false,
                                  showVerticalIndicator: Bool = false,
-                                 source: UICollectionViewDelegate&UICollectionViewDataSource) -> UICollectionView{
+                                 source: UICollectionViewDelegate & UICollectionViewDataSource) -> UICollectionView{
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = source
         collectionView.dataSource = source
