@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Create UIImageView
 public extension UIImageView {
     
     /**
@@ -19,7 +20,8 @@ public extension UIImageView {
                        backgroundColor: UIColor? = nil,
                        tintColor: UIColor? = nil,
                        clipsToBounds: Bool = false,
-                       isOpaque: Bool = true) -> UIImageView {
+                       isOpaque: Bool = true,
+                       tamic: Bool = true) -> UIImageView {
         let imageView = UIImageView()
         
         imageView.image = image
@@ -30,6 +32,7 @@ public extension UIImageView {
         imageView.tintColor = tintColor
         imageView.clipsToBounds = clipsToBounds
         imageView.isOpaque = isOpaque
+        imageView.translatesAutoresizingMaskIntoConstraints = tamic
         
         return imageView
     }
