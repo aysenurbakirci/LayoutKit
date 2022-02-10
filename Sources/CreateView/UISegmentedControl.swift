@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Create UISegmentedControl
 public extension UISegmentedControl {
     
     /**

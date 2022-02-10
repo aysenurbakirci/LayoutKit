@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Create UISlider
 public extension UISlider {
     
     /**
