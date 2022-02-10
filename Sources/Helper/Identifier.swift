@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 
 extension UICollectionReusableView {
-    static var reuseIdentifier: String {
+    public static var reuseIdentifier: String {
         return String(describing: Self.self)
+    }
+}
+
+extension UITableViewCell {
+    public static var reuseIdentifier: String {
+        return String(describing: self)
     }
 }

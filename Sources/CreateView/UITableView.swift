@@ -7,13 +7,34 @@
 
 import UIKit
 
+// MARK: Create UITableView
 public extension UITableView {
     
     /**
      Create UITableView
      */
-    static func createTable() -> UITableView {
-        let tableView = UITableView()
+    static func createTable(style: UITableView.Style = .plain,
+                            estimatedRowHeight: CGFloat,
+                            backgroundColor: UIColor = .clear,
+                            headerView: UIView? = nil,
+                            footerView: UIView? = nil,
+                            keyboardDismissMode: UIScrollView.KeyboardDismissMode = .interactive,
+                            source: UITableViewDataSource & UITableViewDelegate,
+                            addCells: [UITableViewCell.Type]) -> UITableView {
+        let tableView = UITableView(frame: .zero, style: style)
+        tableView.delegate = source
+        tableView.dataSource = source
+        tableView.tableHeaderView = headerView
+        tableView.tableFooterView = footerView
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.backgroundColor = backgroundColor
+        tableView.keyboardDismissMode = keyboardDismissMode
+        
+        addCells.forEach { cell in
+            tableView.register(cell.self, forCellReuseIdentifier: cell.reuseIdentifier)
+        }
+        
         return tableView
     }
 }
