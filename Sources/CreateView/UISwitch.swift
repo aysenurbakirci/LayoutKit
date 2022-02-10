@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Create UISwitch
 public extension UISwitch {
     
     /**
