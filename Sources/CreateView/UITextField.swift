@@ -16,7 +16,7 @@ public extension UITextField {
     static func create(delegate: UITextFieldDelegate,
                        placeholder: String = "",
                        textAlignment: NSTextAlignment = .right,
-                       font: UIFont = .systemFont(ofSize: 14.0),
+                       font: UIFont? = nil,
                        textColor: UIColor = .black,
                        keyboardType: UIKeyboardType = .default) -> UITextField {
         let textField = UITextField()

@@ -12,8 +12,21 @@ public extension UITextView {
     /**
      Create UITextView
      */
-    static func createTextView() -> UITextView {
+    static func create(delegate: UITextViewDelegate? = nil,
+                       textColor: UIColor = .black,
+                       textContainerInset: UIEdgeInsets = .zero,
+                       isEditable: Bool = true,
+                       font: UIFont? = nil,
+                       autocorrectionType: UITextAutocorrectionType = .default) -> UITextView {
         let textView = UITextView()
+
+        textView.delegate = delegate
+        textView.textContainerInset = textContainerInset
+        textView.textColor = textColor
+        textView.isEditable = isEditable
+        textView.font = font
+        textView.autocorrectionType = .default
+        
         return textView
     }
 }
