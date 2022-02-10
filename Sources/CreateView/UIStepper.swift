@@ -24,6 +24,7 @@ public extension UIStepper {
                        wraps: Bool = false,
                        tamic: Bool = true) -> UIStepper {
         let stepper = UIStepper()
+        
         stepper.value = currentValue
         stepper.minimumValue = minValue
         stepper.maximumValue = maxValue
@@ -34,6 +35,7 @@ public extension UIStepper {
         stepper.isContinuous = isContinuous
         stepper.wraps = wraps
         stepper.translatesAutoresizingMaskIntoConstraints = tamic
+        
         return stepper
     }
 }

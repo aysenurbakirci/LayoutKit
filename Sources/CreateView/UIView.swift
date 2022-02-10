@@ -40,13 +40,19 @@ public extension UIView {
     /**
      Create Spacer view
      */
-    static func createSpacer(width: CGFloat? = nil, height: CGFloat? = nil, backgroundColor: UIColor? = nil) -> UIView {
+    static func createSpacer(width: CGFloat? = nil,
+                             height: CGFloat? = nil,
+                             backgroundColor: UIColor? = nil) -> UIView {
         let spacer = UIView()
         if let width = width {
-            spacer.sizeAnchor(width: width)
+            spacer.widthAnchor
+                .constraint(equalToConstant: width)
+                .isActive = true
         }
         if let height = height {
-            spacer.sizeAnchor(height: height)
+            spacer.heightAnchor
+                .constraint(equalToConstant: height)
+                .isActive = true
         }
         spacer.backgroundColor = backgroundColor
         
