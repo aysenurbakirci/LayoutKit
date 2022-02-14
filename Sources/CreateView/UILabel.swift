@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UILabel
+// MARK: - Create UILabel
 public extension UILabel {
     
     /**
@@ -23,6 +23,7 @@ public extension UILabel {
                        textAlignment: NSTextAlignment = .left,
                        lineBreakMode: NSLineBreakMode? = nil,
                        isUserInteractionEnabled: Bool = false,
+                       sizeToFit: Bool = false,
                        tamic: Bool = true) -> UILabel {
         let label = UILabel()
         
@@ -38,6 +39,10 @@ public extension UILabel {
         
         if let lineBreakMode = lineBreakMode {
             label.lineBreakMode = lineBreakMode
+        }
+        
+        if sizeToFit {
+            label.sizeToFit()
         }
         
         label.translatesAutoresizingMaskIntoConstraints = tamic

@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UIProgressView
+// MARK: - Create UIProgressView
 public extension UIProgressView {
     
     /**

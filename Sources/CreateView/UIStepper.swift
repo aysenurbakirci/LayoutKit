@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UIStepper
+// MARK: - Create UIStepper
 public extension UIStepper {
     
     /**

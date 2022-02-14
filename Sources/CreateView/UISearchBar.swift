@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UISearchBar
+// MARK: - Create UISearchBar
 public extension UISearchBar {
     
     /**

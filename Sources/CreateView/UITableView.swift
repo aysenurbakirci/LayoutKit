@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UITableView
+// MARK: - Create UITableView
 public extension UITableView {
     
     /**

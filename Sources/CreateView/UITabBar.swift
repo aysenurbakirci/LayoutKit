@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UITabBar
+// MARK: - Create UITabBar
 public extension UITabBar {
     
     /**

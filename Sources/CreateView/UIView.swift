@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Create UIView
 public extension UIView {
     
     /**
@@ -57,6 +58,26 @@ public extension UIView {
         spacer.backgroundColor = backgroundColor
         
         return spacer
+    }
+}
+
+// MARK: - Helper
+public extension UIView {
+
+    func addBorder(color: UIColor, width: CGFloat) -> Void {
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = width
+    }
+    
+    func addShadow(color: UIColor = .gray, radius: CGFloat, opacity: Float = 1.0) {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = radius
+        self.layer.shadowOffset = .zero
+    }
+    
+    func addCornerRadius(radius: CGFloat) {
+        self.layer.cornerRadius = radius
     }
     
     func addSubviews(_ views: UIView...) {

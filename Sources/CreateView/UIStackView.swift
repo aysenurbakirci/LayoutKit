@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UIStackView
+// MARK: - Create UIStackView
 public extension UIStackView {
     
     /**

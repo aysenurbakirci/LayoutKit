@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Create UIScrollView
+// MARK: - Create UIScrollView
 public extension UIScrollView {
     
     /**

@@ -7,14 +7,15 @@
 
 import UIKit
 
-// MARK: Create UISegmentedControl
+// MARK: - Create UISegmentedControl
 public extension UISegmentedControl {
     
     /**
      Create UISegmentedControl
      */
-    static func create() -> UISegmentedControl {
+    static func create(items: [Any]) -> UISegmentedControl {
         let segment = UISegmentedControl()
+        segment.selectedSegmentIndex = 0
         return segment
     }
 }
