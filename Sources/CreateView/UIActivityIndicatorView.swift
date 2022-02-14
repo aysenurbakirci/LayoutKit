@@ -14,15 +14,24 @@ public extension UIActivityIndicatorView {
      Create UIActivityIndicatorView
      */
     static func create(hidesWhenStopped: Bool,
-                       style: Style? = nil,
                        color: UIColor = .gray) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView()
         
         indicator.hidesWhenStopped = hidesWhenStopped
         indicator.color = color
-        if #available(iOS 13.0, *), let style = style {
-            indicator.style = style
-        }
+        
+        return indicator
+    }
+    
+    @available(iOS 13.0, *)
+    static func create(hidesWhenStopped: Bool,
+                       style: Style = .medium,
+                       color: UIColor = .gray) -> UIActivityIndicatorView {
+        let indicator = UIActivityIndicatorView()
+        
+        indicator.hidesWhenStopped = hidesWhenStopped
+        indicator.color = color
+        indicator.style = style
         
         return indicator
     }
