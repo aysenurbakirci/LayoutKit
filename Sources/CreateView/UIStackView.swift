@@ -27,9 +27,9 @@ public extension UIStackView {
             stack.addArrangedSubview(subview)
         }
         
-        stack.alignment = .center
-        stack.axis = .horizontal
-        stack.distribution = .fill
+        stack.alignment = alignment
+        stack.axis = axis
+        stack.distribution = distribution
         stack.spacing = spacing
         stack.backgroundColor = backgrounColor
         stack.isBaselineRelativeArrangement = isBaselineRelativeArrangement
