@@ -12,11 +12,23 @@ public extension UIStepper {
     
     /**
      Create UIStepper
+     
+        currentValue: Double
+        minValue: Double
+        maxValue: Double
+        stepValue: Double
+        tintColor: UIColor = .black
+        backgroundColor: UIColor = .clear
+        autorepeat: Bool = false
+        isContinuous: Bool = false
+        wraps: Bool = false
+        tamic: Bool = true
+     
      */
-    static func create(currentValue: Double = 0.0,
-                       minValue: Double = 0.0,
-                       maxValue: Double = 10.0,
-                       stepValue: Double = 1.0,
+    static func create(currentValue: Double,
+                       minValue: Double,
+                       maxValue: Double,
+                       stepValue: Double,
                        tintColor: UIColor = .black,
                        backgroundColor: UIColor = .clear,
                        autorepeat: Bool = false,

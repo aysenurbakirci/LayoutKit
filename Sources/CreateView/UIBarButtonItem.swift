@@ -12,8 +12,14 @@ public extension UIBarButtonItem {
     
     /**
      Create UIBarButtonItem with system button items.
+     
+        buttonItem: SystemItem
+        target: Any? = nil
+        tintColor: UIColor = .black
+        action: Selector? = nil
+     
      */
-    static func create(buttonItem: SystemItem = .add,
+    static func create(buttonItem: SystemItem,
                        target: Any? = nil,
                        tintColor: UIColor = .black,
                        action: Selector? = nil) -> UIBarButtonItem {
@@ -26,9 +32,16 @@ public extension UIBarButtonItem {
     
     /**
      Create UIBarButtonItem with title.
+     
+        style: Style
+        title: String? = nil
+        target: Any? = nil
+        tintColor: UIColor = .black
+        action: Selector? = nil
+     
      */
-    static func create(title: String? = nil,
-                       style: Style = .done,
+    static func create(style: Style,
+                       title: String? = nil,
                        target: Any? = nil,
                        tintColor: UIColor = .black,
                        action: Selector? = nil) -> UIBarButtonItem {
@@ -42,10 +55,18 @@ public extension UIBarButtonItem {
     
     /**
      Create UIBarButtonItem with image and landspace image.
+     
+        style: Style
+        image: UIImage? = nil
+        landscapeImagePhone: UIImage? = nil
+        target: Any? = nil
+        tintColor: UIColor = .black
+        action: Selector? = nil
+     
      */
-    static func create(image: UIImage? = nil,
+    static func create(style: Style,
+                       image: UIImage? = nil,
                        landscapeImagePhone: UIImage? = nil,
-                       style: Style = .done,
                        target: Any? = nil,
                        tintColor: UIColor = .black,
                        action: Selector? = nil) -> UIBarButtonItem {
@@ -61,9 +82,15 @@ public extension UIBarButtonItem {
     /**
      Create UIBarButtonItem with system item.
      This method is available in iOS 14 and later versions.
+     
+        systemItem: SystemItem
+        primaryAction: UIAction? = nil
+        menu: UIMenu? = nil
+        tintColor: UIColor = .black
+     
      */
     @available(iOS 14.0, *)
-    static func create(systemItem: SystemItem = .add,
+    static func create(systemItem: SystemItem,
                        primaryAction: UIAction? = nil,
                        menu: UIMenu? = nil,
                        tintColor: UIColor = .black) -> UIBarButtonItem {
@@ -77,6 +104,13 @@ public extension UIBarButtonItem {
     /**
      Create UIBarButtonItem with title and image.
      This method is available in iOS 14 and later versions.
+     
+        title: String? = nil
+        image: UIImage? = nil
+        tintColor: UIColor = .black
+        primaryAction: UIAction? = nil
+        menu: UIMenu? = nil
+     
      */
     @available(iOS 14.0, *)
     static func create(title: String? = nil,

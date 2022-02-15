@@ -11,7 +11,21 @@ import UIKit
 public extension UIButton {
     
     /**
-     Create UIButton -> title and backround color.
+     Create UIButton.
+     
+        type: ButtonType = .system
+        title: String = ""
+        image: UIImage? = nil
+        titleColor: UIColor = .black
+        font: UIFont? = nil
+        numberOfLines: Int = 0
+        backgroundColor: UIColor = .clear
+        backgroundImage: UIImage? = nil
+        tamic: Bool = true
+        sizeToFit: Bool = true
+        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center
+        verticalAlignment: UIControl.ContentVerticalAlignment = .center
+     
      */
     static func create(type: ButtonType = .system,
                        title: String = "",

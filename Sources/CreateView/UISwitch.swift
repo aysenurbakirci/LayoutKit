@@ -12,6 +12,13 @@ public extension UISwitch {
     
     /**
      Create UISwitch
+     
+        thumbColor: UIColor = .white
+        onTintColor: UIColor = .green
+        tintColor: UIColor = .lightGray
+        isOn: Bool = false
+        tamic: Bool = true
+     
      */
     static func create(thumbColor: UIColor = .white,
                        onTintColor: UIColor = .green,

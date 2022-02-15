@@ -12,6 +12,11 @@ public extension UIAlertAction {
     
     /**
      Create UIAlertAction
+     
+        title: String? = nil
+        style: Style = .default
+        handler: ((UIAlertAction) -> ())? = nil
+     
      */
     static func createAction(title: String? = nil,
                              style: Style = .default,

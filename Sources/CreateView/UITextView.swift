@@ -12,18 +12,20 @@ public extension UITextView {
     
     /**
      Create UITextView
+     
+     textColor: UIColor = .black
+     textContainerInset: UIEdgeInsets = .zero
+     isEditable: Bool = true
+     font: UIFont? = nil
+     autocorrectionType: UITextAutocorrectionType = .default
+     
      */
-    static func create(delegate: UITextViewDelegate? = nil,
-                       textColor: UIColor = .black,
+    static func create(textColor: UIColor = .black,
                        textContainerInset: UIEdgeInsets = .zero,
                        isEditable: Bool = true,
                        font: UIFont? = nil,
                        autocorrectionType: UITextAutocorrectionType = .default) -> UITextView {
         let textView = UITextView()
-
-        if let delegate = delegate {
-            textView.delegate = delegate
-        }
         
         textView.textContainerInset = textContainerInset
         textView.textColor = textColor

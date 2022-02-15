@@ -12,26 +12,35 @@ public extension UISearchBar {
     
     /**
      Create UISearchBar
+     
+        style: UISearchBar.Style
+        placeholder: String = "Search"
+        isTranslucent: Bool = false
+        tintColor: UIColor = .black
+        barTintColor: UIColor = .clear
+        backgroundColor: UIColor = .white
+        prompt: String? = nil
+        backgroundImage: UIImage? = nil
+        autocorrectionType: UITextAutocorrectionType = .no
+        enablesReturnKeyAutomatically: Bool = true
+        returnKeyType: UIReturnKeyType = .default
+        tamic: Bool = true
+     
      */
-    static func create(delegate: UISearchBarDelegate? = nil,
-                       style: UISearchBar.Style = .default,
-                       isTranslucent: Bool = false,
+    static func create(style: UISearchBar.Style,
                        placeholder: String = "Search",
-                       prompt: String? = nil,
+                       isTranslucent: Bool = false,
                        tintColor: UIColor = .black,
                        barTintColor: UIColor = .clear,
                        backgroundColor: UIColor = .white,
+                       prompt: String? = nil,
                        backgroundImage: UIImage? = nil,
                        autocorrectionType: UITextAutocorrectionType = .no,
                        enablesReturnKeyAutomatically: Bool = true,
                        returnKeyType: UIReturnKeyType = .default,
                        tamic: Bool = true) -> UISearchBar {
         let searchBar = UISearchBar()
-        
-        if let delegate = delegate {
-            searchBar.delegate = delegate
-        }
-        
+
         searchBar.searchBarStyle = style
         searchBar.isTranslucent = isTranslucent
         searchBar.placeholder = placeholder

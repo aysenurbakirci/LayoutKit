@@ -12,12 +12,23 @@ public extension UIScrollView {
     
     /**
      Create UIScrollView
+     
+        indicatorStyle: UIScrollView.IndicatorStyle
+        contentSize: CGSize = .zero
+        offset: CGPoint? = nil
+        inset: UIEdgeInsets? = nil
+        isPagging: Bool = false
+        topScroll: Bool = false
+        bounces: Bool = false
+        showHorizontalIndicator: Bool = true
+        showVerticalIndicator: Bool = true
+        tamic: Bool = true
+     
      */
-    static func create(delegate: UIScrollViewDelegate? = nil,
+    static func create(indicatorStyle: UIScrollView.IndicatorStyle,
                        contentSize: CGSize = .zero,
                        offset: CGPoint? = nil,
                        inset: UIEdgeInsets? = nil,
-                       indicatorStyle: UIScrollView.IndicatorStyle = .default,
                        isPagging: Bool = false,
                        topScroll: Bool = false,
                        bounces: Bool = false,
@@ -25,10 +36,6 @@ public extension UIScrollView {
                        showVerticalIndicator: Bool = true,
                        tamic: Bool = true) -> UIScrollView {
         let scroll = UIScrollView()
-        
-        if let delegate = delegate {
-            scroll.delegate = delegate
-        }
         
         scroll.contentSize = contentSize
         

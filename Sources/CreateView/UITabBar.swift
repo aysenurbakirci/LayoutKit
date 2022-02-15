@@ -12,9 +12,19 @@ public extension UITabBar {
     
     /**
      Create UITabBar
+     
+        items: [UITabBarItem],
+        selectedItem: UITabBarItem,
+        tintColor: UIColor? = nil,
+        barTintColor: UIColor? = nil,
+        unselectedItemTintColor: UIColor? = nil,
+        backgroundColor: UIColor? = nil,
+        itemSpacing: CGFloat = 0.0,
+        isTranslucent: Bool = false,
+        tamic: Bool = true
+     
      */
-    static func create(delegate: UITabBarDelegate? = nil,
-                       items: [UITabBarItem],
+    static func create(items: [UITabBarItem],
                        selectedItem: UITabBarItem,
                        tintColor: UIColor? = nil,
                        barTintColor: UIColor? = nil,
@@ -24,11 +34,7 @@ public extension UITabBar {
                        isTranslucent: Bool = false,
                        tamic: Bool = true) -> UITabBar {
         let tabBar = UITabBar()
-        
-        if let delegate = delegate {
-            tabBar.delegate = delegate
-        }
-        
+
         tabBar.items = items
         tabBar.selectedItem = selectedItem
         tabBar.tintColor = tintColor

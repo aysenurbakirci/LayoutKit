@@ -12,18 +12,20 @@ public extension UITextField {
     
     /**
      Create UITextField
+     
+        placeholder: String = ""
+        textAlignment: NSTextAlignment = .right
+        font: UIFont? = nil
+        textColor: UIColor = .black
+        keyboardType: UIKeyboardType = .default
+     
      */
-    static func create(delegate: UITextFieldDelegate? = nil,
-                       placeholder: String = "",
+    static func create(placeholder: String = "",
                        textAlignment: NSTextAlignment = .right,
                        font: UIFont? = nil,
                        textColor: UIColor = .black,
                        keyboardType: UIKeyboardType = .default) -> UITextField {
         let textField = UITextField()
-        
-        if let delegate = delegate {
-            textField.delegate = delegate
-        }
         
         textField.textAlignment = textAlignment
         textField.font = font

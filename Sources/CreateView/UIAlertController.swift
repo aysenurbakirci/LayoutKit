@@ -13,16 +13,23 @@ public extension UIAlertController {
     
     /**
      Create UIAlertController
+     
+        preferredStyle: Style
+        title: String? = nil
+        message: String? = nil
+        buttons: [UIAlertAction]? = nil
+        textFields: [UITextField]? = nil
+     
      */
-    static func create(title: String? = nil,
+    static func create(preferredStyle: Style,
+                       title: String? = nil,
                        message: String? = nil,
-                       preferredStyle: Style = .alert,
-                       buttons: [UIAlertAction] = [],
-                       textFields: [UITextField]? = []) -> UIAlertController {
+                       buttons: [UIAlertAction]? = nil,
+                       textFields: [UITextField]? = nil) -> UIAlertController {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: preferredStyle)
-        buttons.forEach { action in
+        buttons?.forEach { action in
             alertController.addAction(action)
         }
         

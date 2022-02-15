@@ -12,17 +12,16 @@ public extension UIPickerView {
     
     /**
      Create UIPickerView
+     
+        backgroundColor: UIColor = .clear
+        tintColor: UIColor = .black
+        tamic: Bool = true
+     
      */
-    static func create(source: (UIPickerViewDelegate & UIPickerViewDataSource)? = nil,
-                       backgroundColor: UIColor = .clear,
+    static func create(backgroundColor: UIColor = .clear,
                        tintColor: UIColor = .black,
                        tamic: Bool = true) -> UIPickerView {
         let picker = UIPickerView()
-        
-        if let source = source {
-            picker.delegate = source
-            picker.dataSource = source
-        }
 
         picker.backgroundColor = backgroundColor
         picker.tintColor = tintColor

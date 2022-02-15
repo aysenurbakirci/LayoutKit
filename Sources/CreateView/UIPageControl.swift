@@ -8,12 +8,21 @@
 import UIKit
 
 // MARK: - Create UIPageControl
-extension UIPageControl {
+public extension UIPageControl {
     
     /**
-     Create UIPageControl
+     Create UIPageControl.
+     
+        currentPage: Int
+        numberOfPages: Int
+        indicatorColor: UIColor = .gray
+        currentIndicatorColor: UIColor = .black
+        backgroundColor: UIColor = .clear
+        hidesForSinglePage: Bool = true
+        tamic: Bool = true
+     
      */
-    static func create(currentPage: Int = 1,
+    static func create(currentPage: Int,
                        numberOfPages: Int,
                        indicatorColor: UIColor = .gray,
                        currentIndicatorColor: UIColor = .black,

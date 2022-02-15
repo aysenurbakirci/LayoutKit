@@ -12,6 +12,15 @@ public extension UICollectionView {
     
     /**
      Create UICollectionView
+     
+        layout: UICollectionViewLayout
+        addCells: [UICollectionViewCell.Type]
+        header: UICollectionReusableView.Type? = nil
+        footer: UICollectionReusableView.Type? = nil
+        backgroundColor: UIColor = .clear
+        showHorizontalIndicator: Bool = false
+        showVerticalIndicator: Bool = false
+     
      */
     static func createCollection(layout: UICollectionViewLayout,
                                  addCells: [UICollectionViewCell.Type],
@@ -19,11 +28,9 @@ public extension UICollectionView {
                                  footer: UICollectionReusableView.Type? = nil,
                                  backgroundColor: UIColor = .clear,
                                  showHorizontalIndicator: Bool = false,
-                                 showVerticalIndicator: Bool = false,
-                                 source: UICollectionViewDelegate & UICollectionViewDataSource) -> UICollectionView{
+                                 showVerticalIndicator: Bool = false) -> UICollectionView{
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.delegate = source
-        collectionView.dataSource = source
+
         collectionView.backgroundColor = backgroundColor
         collectionView.showsHorizontalScrollIndicator = showHorizontalIndicator
         collectionView.showsVerticalScrollIndicator = showVerticalIndicator

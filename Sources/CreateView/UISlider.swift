@@ -12,10 +12,22 @@ public extension UISlider {
     
     /**
      Create UISlider
+     
+        currentValue: Float
+        minValue: Float
+        maxValue: Float
+        minValueImage: UIImage? = nil
+        maxValueImage: UIImage? = nil
+        minTrackColor: UIColor = .black
+        maxTrackColor: UIColor = .gray
+        thumbColor: UIColor = .black
+        isContinuous: Bool = true
+        tamic: Bool = true
+     
      */
-    static func create(currentValue: Float = 5.5,
-                       minValue: Float = 1.0,
-                       maxValue: Float = 10.0,
+    static func create(currentValue: Float,
+                       minValue: Float,
+                       maxValue: Float,
                        minValueImage: UIImage? = nil,
                        maxValueImage: UIImage? = nil,
                        minTrackColor: UIColor = .black,

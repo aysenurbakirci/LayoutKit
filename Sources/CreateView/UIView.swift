@@ -12,34 +12,35 @@ public extension UIView {
     
     /**
      Create UIView
+     
+        backgroundColor: UIColor? = nil
+        alpha: CGFloat = 1.0
+        isUserInteractionEnabled: Bool = true
+        tamic: Bool = true
+     
      */
     static func create(backgroundColor: UIColor? = nil,
                        alpha: CGFloat = 1.0,
-                       cornerRadius: CGFloat? = nil,
-                       borderStyle: (color: UIColor, width: CGFloat)? = nil,
-                       isUserInteractionEnabled: Bool = true) -> UIView {
+                       isUserInteractionEnabled: Bool = true,
+                       tamic: Bool = true) -> UIView {
 
         let view = UIView()
+        
         view.backgroundColor = backgroundColor
         view.alpha = alpha
         view.isUserInteractionEnabled = isUserInteractionEnabled
-
-        if let cornerRadius = cornerRadius {
-            view.layer.cornerRadius = cornerRadius
-        }
-
-        if let borderStyle = borderStyle {
-            view.layer.borderColor = borderStyle.color.cgColor
-            view.layer.borderWidth = borderStyle.width
-        }
+        view.translatesAutoresizingMaskIntoConstraints = tamic
         
-        view.layer.masksToBounds = cornerRadius == nil ? true : false || borderStyle == nil ? true : false
-
         return view
     }
     
     /**
      Create Spacer view
+     
+        width: CGFloat? = nil
+        height: CGFloat? = nil
+        backgroundColor: UIColor? = ni
+     
      */
     static func createSpacer(width: CGFloat? = nil,
                              height: CGFloat? = nil,
@@ -77,6 +78,7 @@ public extension UIView {
     }
     
     func addCornerRadius(radius: CGFloat) {
+        self.layer.masksToBounds = true
         self.layer.cornerRadius = radius
     }
     

@@ -12,11 +12,21 @@ public extension UIStackView {
     
     /**
      Create UIStackView
+     
+        subviews: [UIView]
+        axis: NSLayoutConstraint.Axis
+        distribution: UIStackView.Distribution
+        alignment: UIStackView.Alignment
+        spacing: CGFloat = 1.0
+        backgrounColor: UIColor = .clear
+        isBaselineRelativeArrangement: Bool = false
+        tamic: Bool = true
+     
      */
     static func create(subviews: [UIView],
-                       axis: NSLayoutConstraint.Axis = .horizontal,
-                       distribution: UIStackView.Distribution = .fill,
-                       alignment: UIStackView.Alignment = .fill,
+                       axis: NSLayoutConstraint.Axis,
+                       distribution: UIStackView.Distribution,
+                       alignment: UIStackView.Alignment,
                        spacing: CGFloat = 1.0,
                        backgrounColor: UIColor = .clear,
                        isBaselineRelativeArrangement: Bool = false,

@@ -12,18 +12,25 @@ public extension UITableView {
     
     /**
      Create UITableView
+     
+        style: UITableView.Style = .plain
+        estimatedRowHeight: CGFloat
+        backgroundColor: UIColor = .clear
+        headerView: UIView? = nil
+        footerView: UIView? = nil
+        keyboardDismissMode: UIScrollView.KeyboardDismissMode = .interactive
+        addCells: [UITableViewCell.Type]
+     
      */
-    static func createTable(style: UITableView.Style = .plain,
+    static func createTable(style: UITableView.Style,
                             estimatedRowHeight: CGFloat,
                             backgroundColor: UIColor = .clear,
                             headerView: UIView? = nil,
                             footerView: UIView? = nil,
                             keyboardDismissMode: UIScrollView.KeyboardDismissMode = .interactive,
-                            source: UITableViewDataSource & UITableViewDelegate,
                             addCells: [UITableViewCell.Type]) -> UITableView {
         let tableView = UITableView(frame: .zero, style: style)
-        tableView.delegate = source
-        tableView.dataSource = source
+        
         tableView.tableHeaderView = headerView
         tableView.tableFooterView = footerView
         tableView.rowHeight = UITableView.automaticDimension

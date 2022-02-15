@@ -12,12 +12,23 @@ public extension UIImageView {
     
     /**
      Create UIImageView
+     
+        image: UIImage
+        highlightedImage: UIImage? = nil,
+        contentMode: ContentMode = .scaleAspectFit,
+        isUserInteractionEnabled: Bool = false,
+        backgroundColor: UIColor? = nil,
+        tintColor: UIColor? = nil,
+        clipsToBounds: Bool = false,
+        isOpaque: Bool = true,
+        tamic: Bool = true
+     
      */
-    static func create(image: UIImage? = nil,
+    static func create(image: UIImage,
                        highlightedImage: UIImage? = nil,
-                       contentMode: ContentMode = .scaleToFill,
+                       contentMode: ContentMode = .scaleAspectFit,
                        isUserInteractionEnabled: Bool = false,
-                       backgroundColor: UIColor? = nil,
+                       backgroundColor: UIColor = .clear,
                        tintColor: UIColor? = nil,
                        clipsToBounds: Bool = false,
                        isOpaque: Bool = true,

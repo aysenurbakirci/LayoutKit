@@ -12,6 +12,12 @@ public extension UIActivityIndicatorView {
     
     /**
      Create UIActivityIndicatorView
+     
+        hidesWhenStopped: Bool = true
+        color: UIColor = .gray
+        backgroundColor: UIColor = .clear
+        tamic: Bool = true
+     
      */
     static func create(hidesWhenStopped: Bool = true,
                        color: UIColor = .gray,
