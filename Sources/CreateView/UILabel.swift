@@ -14,7 +14,6 @@ public extension UILabel {
      Create UILabel.
      */
     static func create(text: String = "",
-                       accesibilityIdentifier: String? = nil,
                        font: UIFont? = nil,
                        backgroundColor: UIColor = .clear,
                        textColor: UIColor = .black,
@@ -32,7 +31,6 @@ public extension UILabel {
         label.textAlignment = textAlignment
         label.font = font
         label.numberOfLines = numberOfLines
-        label.accessibilityIdentifier = accesibilityIdentifier
         label.backgroundColor = backgroundColor
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled

@@ -13,7 +13,7 @@ public extension UISearchBar {
     /**
      Create UISearchBar
      */
-    static func create(delegate: UISearchBarDelegate,
+    static func create(delegate: UISearchBarDelegate? = nil,
                        style: UISearchBar.Style = .default,
                        isTranslucent: Bool = false,
                        placeholder: String = "Search",
@@ -28,7 +28,10 @@ public extension UISearchBar {
                        tamic: Bool = true) -> UISearchBar {
         let searchBar = UISearchBar()
         
-        searchBar.delegate = delegate
+        if let delegate = delegate {
+            searchBar.delegate = delegate
+        }
+        
         searchBar.searchBarStyle = style
         searchBar.isTranslucent = isTranslucent
         searchBar.placeholder = placeholder

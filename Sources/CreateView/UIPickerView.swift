@@ -13,18 +13,19 @@ public extension UIPickerView {
     /**
      Create UIPickerView
      */
-    static func create(source: UIPickerViewDelegate & UIPickerViewDataSource,
+    static func create(source: (UIPickerViewDelegate & UIPickerViewDataSource)? = nil,
                        backgroundColor: UIColor = .clear,
                        tintColor: UIColor = .black,
-                       isOpaque: Bool = true,
                        tamic: Bool = true) -> UIPickerView {
         let picker = UIPickerView()
         
-        picker.delegate = source
-        picker.dataSource = source
+        if let source = source {
+            picker.delegate = source
+            picker.dataSource = source
+        }
+
         picker.backgroundColor = backgroundColor
         picker.tintColor = tintColor
-        picker.isOpaque = isOpaque
         picker.translatesAutoresizingMaskIntoConstraints = tamic
         
         return picker

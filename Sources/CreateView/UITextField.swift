@@ -13,7 +13,7 @@ public extension UITextField {
     /**
      Create UITextField
      */
-    static func create(delegate: UITextFieldDelegate,
+    static func create(delegate: UITextFieldDelegate? = nil,
                        placeholder: String = "",
                        textAlignment: NSTextAlignment = .right,
                        font: UIFont? = nil,
@@ -21,7 +21,10 @@ public extension UITextField {
                        keyboardType: UIKeyboardType = .default) -> UITextField {
         let textField = UITextField()
         
-        textField.delegate = delegate
+        if let delegate = delegate {
+            textField.delegate = delegate
+        }
+        
         textField.textAlignment = textAlignment
         textField.font = font
         textField.textColor = textColor

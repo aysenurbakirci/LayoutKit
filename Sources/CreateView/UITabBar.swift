@@ -13,7 +13,7 @@ public extension UITabBar {
     /**
      Create UITabBar
      */
-    static func create(delegate: UITabBarDelegate,
+    static func create(delegate: UITabBarDelegate? = nil,
                        items: [UITabBarItem],
                        selectedItem: UITabBarItem,
                        tintColor: UIColor? = nil,
@@ -25,7 +25,10 @@ public extension UITabBar {
                        tamic: Bool = true) -> UITabBar {
         let tabBar = UITabBar()
         
-        tabBar.delegate = delegate
+        if let delegate = delegate {
+            tabBar.delegate = delegate
+        }
+        
         tabBar.items = items
         tabBar.selectedItem = selectedItem
         tabBar.tintColor = tintColor

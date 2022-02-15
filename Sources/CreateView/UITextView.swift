@@ -21,7 +21,10 @@ public extension UITextView {
                        autocorrectionType: UITextAutocorrectionType = .default) -> UITextView {
         let textView = UITextView()
 
-        textView.delegate = delegate
+        if let delegate = delegate {
+            textView.delegate = delegate
+        }
+        
         textView.textContainerInset = textContainerInset
         textView.textColor = textColor
         textView.isEditable = isEditable

@@ -13,7 +13,7 @@ public extension UIScrollView {
     /**
      Create UIScrollView
      */
-    static func create(delegate: UIScrollViewDelegate,
+    static func create(delegate: UIScrollViewDelegate? = nil,
                        contentSize: CGSize = .zero,
                        offset: CGPoint? = nil,
                        inset: UIEdgeInsets? = nil,
@@ -26,7 +26,10 @@ public extension UIScrollView {
                        tamic: Bool = true) -> UIScrollView {
         let scroll = UIScrollView()
         
-        scroll.delegate = delegate
+        if let delegate = delegate {
+            scroll.delegate = delegate
+        }
+        
         scroll.contentSize = contentSize
         
         if let offset = offset {
