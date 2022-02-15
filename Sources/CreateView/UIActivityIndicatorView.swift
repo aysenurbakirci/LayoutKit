@@ -13,25 +13,33 @@ public extension UIActivityIndicatorView {
     /**
      Create UIActivityIndicatorView
      */
-    static func create(hidesWhenStopped: Bool,
-                       color: UIColor = .gray) -> UIActivityIndicatorView {
+    static func create(hidesWhenStopped: Bool = true,
+                       color: UIColor = .gray,
+                       backgroundColor: UIColor = .clear,
+                       tamic: Bool = true) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView()
         
         indicator.hidesWhenStopped = hidesWhenStopped
+        indicator.backgroundColor = .gray
         indicator.color = color
+        indicator.translatesAutoresizingMaskIntoConstraints = tamic
         
         return indicator
     }
     
     @available(iOS 13.0, *)
-    static func create(hidesWhenStopped: Bool,
-                       style: Style = .medium,
-                       color: UIColor = .gray) -> UIActivityIndicatorView {
+    static func create(hidesWhenStopped: Bool = true,
+                       style: UIActivityIndicatorView.Style = .medium,
+                       color: UIColor = .gray,
+                       backgroundColor: UIColor = .clear,
+                       tamic: Bool = true) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView()
         
         indicator.hidesWhenStopped = hidesWhenStopped
         indicator.color = color
+        indicator.backgroundColor = .gray
         indicator.style = style
+        indicator.translatesAutoresizingMaskIntoConstraints = tamic
         
         return indicator
     }

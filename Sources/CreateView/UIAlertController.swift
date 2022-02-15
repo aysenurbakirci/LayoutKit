@@ -8,6 +8,7 @@
 import UIKit
 
 //MARK: - Create UIAlertController
+
 public extension UIAlertController {
     
     /**
@@ -16,17 +17,25 @@ public extension UIAlertController {
     static func create(title: String? = nil,
                        message: String? = nil,
                        preferredStyle: Style = .alert,
-                       actions: [UIAlertAction] = [],
-                       textFields: [((UITextField) -> ())]? = []) -> UIAlertController {
+                       buttons: [UIAlertAction] = [],
+                       textFields: [UITextField]? = []) -> UIAlertController {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: preferredStyle)
-        actions.forEach { action in
+        buttons.forEach { action in
             alertController.addAction(action)
         }
         
-        textFields?.forEach({ textField in
-            alertController.addTextField(configurationHandler: textField)
+        textFields?.forEach({ field in
+            
+            alertController.addTextField { alertField in
+                
+                alertField.textAlignment = field.textAlignment
+                alertField.font = field.font
+                alertField.textColor = field.textColor
+                alertField.placeholder = field.placeholder
+                alertField.keyboardType = field.keyboardType
+            }
         })
         
         return alertController
