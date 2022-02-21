@@ -34,7 +34,9 @@ public extension UIScrollView {
                        bounces: Bool = false,
                        showHorizontalIndicator: Bool = true,
                        showVerticalIndicator: Bool = true,
-                       tamic: Bool = true) -> UIScrollView {
+                       tamic: Bool = true,
+                       tag: Int = 0) -> UIScrollView {
+        
         let scroll = UIScrollView()
         
         scroll.contentSize = contentSize
@@ -54,6 +56,7 @@ public extension UIScrollView {
         scroll.showsHorizontalScrollIndicator = showHorizontalIndicator
         scroll.showsVerticalScrollIndicator = showVerticalIndicator
         scroll.translatesAutoresizingMaskIntoConstraints = tamic
+        scroll.tag = 0
         
         return scroll
     }

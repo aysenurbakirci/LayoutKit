@@ -28,12 +28,20 @@ public extension UICollectionView {
                                  footer: UICollectionReusableView.Type? = nil,
                                  backgroundColor: UIColor = .clear,
                                  showHorizontalIndicator: Bool = false,
-                                 showVerticalIndicator: Bool = false) -> UICollectionView{
+                                 showVerticalIndicator: Bool = false,
+                                 isScrolling: Bool = true,
+                                 isPaging: Bool = false,
+                                 isPrefetching: Bool = true,
+                                 tag: Int = 0) -> UICollectionView{
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 
         collectionView.backgroundColor = backgroundColor
         collectionView.showsHorizontalScrollIndicator = showHorizontalIndicator
         collectionView.showsVerticalScrollIndicator = showVerticalIndicator
+        collectionView.isScrollEnabled = isScrolling
+        collectionView.isPagingEnabled = isPaging
+        collectionView.isPrefetchingEnabled = isPrefetching
+        collectionView.tag = tag
         
         addCells.forEach { cellType in
             collectionView.register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)

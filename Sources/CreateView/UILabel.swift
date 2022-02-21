@@ -78,6 +78,7 @@ public extension UILabel {
                        textColor: UIColor = .black,
                        numberOfLines: Int = 0,
                        textAlignment: NSTextAlignment = .left,
+                       tag: Int = 0,
                        isUserInteractionEnabled: Bool = false,
                        sizeToFit: Bool = true,
                        tamic: Bool = true) -> UILabel {
@@ -90,6 +91,7 @@ public extension UILabel {
         label.backgroundColor = backgroundColor
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled
+        label.tag = tag
         
         if sizeToFit {
             label.sizeToFit()

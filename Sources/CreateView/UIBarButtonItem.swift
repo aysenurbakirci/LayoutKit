@@ -17,65 +17,58 @@ public extension UIBarButtonItem {
         target: Any? = nil
         tintColor: UIColor = .black
         action: Selector? = nil
+        tag: Int = 0,
+        isSpringLoaded: Bool = false
      
      */
     static func create(buttonItem: SystemItem,
                        target: Any? = nil,
                        tintColor: UIColor = .black,
-                       action: Selector? = nil) -> UIBarButtonItem {
+                       action: Selector? = nil,
+                       tag: Int = 0) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(barButtonSystemItem: buttonItem,
                                         target: target,
                                         action: action)
+        
         barButton.tintColor = tintColor
+        barButton.tag = tag
+        
         return barButton
     }
     
     /**
      Create UIBarButtonItem with title.
      
-        style: Style
         title: String? = nil
-        target: Any? = nil
-        tintColor: UIColor = .black
-        action: Selector? = nil
+        style: Style,
+        image: UIImage? = nil,
+        landscapeImage: UIImage? = nil,
+        target: Any? = nil,
+        tintColor: UIColor = .black,
+        action: Selector? = nil,
+        tag: Int = 0,
+        isSpringLoaded: Bool = false
      
      */
-    static func create(style: Style,
-                       title: String? = nil,
+
+    static func create(title: String? = nil,
+                       style: Style,
+                       image: UIImage? = nil,
+                       landscapeImage: UIImage? = nil,
                        target: Any? = nil,
                        tintColor: UIColor = .black,
-                       action: Selector? = nil) -> UIBarButtonItem {
+                       action: Selector? = nil,
+                       tag: Int = 0) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(title: title,
                                         style: style,
                                         target: target,
                                         action: action)
+        
         barButton.tintColor = tintColor
-        return barButton
-    }
-    
-    /**
-     Create UIBarButtonItem with image and landspace image.
-     
-        style: Style
-        image: UIImage? = nil
-        landscapeImagePhone: UIImage? = nil
-        target: Any? = nil
-        tintColor: UIColor = .black
-        action: Selector? = nil
-     
-     */
-    static func create(style: Style,
-                       image: UIImage? = nil,
-                       landscapeImagePhone: UIImage? = nil,
-                       target: Any? = nil,
-                       tintColor: UIColor = .black,
-                       action: Selector? = nil) -> UIBarButtonItem {
-        let barButton = UIBarButtonItem(image: image,
-                                        landscapeImagePhone: landscapeImagePhone,
-                                        style: style,
-                                        target: target,
-                                        action: action)
-        barButton.tintColor = tintColor
+        barButton.image = image
+        barButton.landscapeImagePhone = landscapeImage
+        barButton.tag = tag
+        
         return barButton
     }
     
@@ -87,17 +80,23 @@ public extension UIBarButtonItem {
         primaryAction: UIAction? = nil
         menu: UIMenu? = nil
         tintColor: UIColor = .black
+        tag: Int = 0,
+        isSpringLoaded: Bool = false)
      
      */
     @available(iOS 14.0, *)
     static func create(systemItem: SystemItem,
                        primaryAction: UIAction? = nil,
                        menu: UIMenu? = nil,
-                       tintColor: UIColor = .black) -> UIBarButtonItem {
+                       tintColor: UIColor = .black,
+                       tag: Int = 0) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(systemItem: systemItem,
                                         primaryAction: primaryAction,
                                         menu: menu)
+        
         barButton.tintColor = tintColor
+        barButton.tag = tag
+        
         return barButton
     }
     
@@ -110,6 +109,9 @@ public extension UIBarButtonItem {
         tintColor: UIColor = .black
         primaryAction: UIAction? = nil
         menu: UIMenu? = nil
+        landscapeImage: UIImage? = nil,
+        tag: Int = 0,
+        isSpringLoaded: Bool = false
      
      */
     @available(iOS 14.0, *)
@@ -117,12 +119,18 @@ public extension UIBarButtonItem {
                        image: UIImage? = nil,
                        tintColor: UIColor = .black,
                        primaryAction: UIAction? = nil,
-                       menu: UIMenu? = nil) -> UIBarButtonItem {
+                       menu: UIMenu? = nil,
+                       landscapeImage: UIImage? = nil,
+                       tag: Int = 0) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(title: title,
                                         image: image,
                                         primaryAction: primaryAction,
                                         menu: menu)
+        
         barButton.tintColor = tintColor
+        barButton.landscapeImagePhone = landscapeImage
+        barButton.tag = tag
+        
         return barButton
     }
 }

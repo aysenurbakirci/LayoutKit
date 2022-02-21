@@ -24,7 +24,9 @@ public extension UIProgressView {
      */
     static func create(style: UIProgressView.Style,
                        tintColor: UIColor = .black,
+                       trackTintColor: UIColor = .gray,
                        currentProgress: Float = 0.0,
+                       tag: Int = 0,
                        observedProgress: Progress? = nil,
                        progressImage: UIImage? = nil,
                        trackImage: UIImage? = nil,
@@ -33,18 +35,12 @@ public extension UIProgressView {
         
         progress.progressViewStyle = style
         progress.progressTintColor = tintColor
-        
-        if currentProgress < 0.0 {
-            progress.progress = 0.0
-        } else if currentProgress > 1.0  {
-            progress.progress = 1.0
-        } else {
-            progress.progress = currentProgress
-        }
-        
+        progress.trackTintColor = trackTintColor
+        progress.progress = currentProgress
         progress.observedProgress = observedProgress
         progress.progressImage = progressImage
         progress.trackImage = trackImage
+        progress.tag = tag
         progress.translatesAutoresizingMaskIntoConstraints = tamic
         
         return progress

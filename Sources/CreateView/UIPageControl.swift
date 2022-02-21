@@ -28,7 +28,10 @@ public extension UIPageControl {
                        currentIndicatorColor: UIColor = .black,
                        backgroundColor: UIColor = .clear,
                        hidesForSinglePage: Bool = true,
-                       tamic: Bool = true) -> UIPageControl {
+                       tamic: Bool = true,
+                       tag: Int = 0,
+                       horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
+                       verticalAlignment: UIControl.ContentVerticalAlignment = .center) -> UIPageControl {
         let pageControl = UIPageControl()
         
         pageControl.currentPage = currentPage
@@ -38,6 +41,9 @@ public extension UIPageControl {
         pageControl.backgroundColor = backgroundColor
         pageControl.hidesForSinglePage = hidesForSinglePage
         pageControl.translatesAutoresizingMaskIntoConstraints = tamic
+        pageControl.contentHorizontalAlignment = horizontalAlignment
+        pageControl.contentVerticalAlignment = verticalAlignment
+        pageControl.tag = tag
         
         return pageControl
     }

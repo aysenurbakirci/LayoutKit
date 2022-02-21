@@ -26,7 +26,7 @@ public extension UIDatePicker {
         tamic: Bool = true
      */
     static func create(mode: UIDatePicker.Mode,
-                       minuteInterval: Int? = nil,
+                       minuteInterval: Int = 1,
                        tintColor: UIColor = .black,
                        backgroundColor: UIColor = .clear,
                        locale: Locale = .current,
@@ -34,7 +34,7 @@ public extension UIDatePicker {
                        maxDate: Date = .distantFuture,
                        minDate: Date = .distantPast,
                        date: Date? = nil,
-                       countDownDuration: TimeInterval? = nil,
+                       tag: Int = 0,
                        tamic: Bool = true) -> UIDatePicker {
         let picker = UIDatePicker()
         
@@ -45,17 +45,14 @@ public extension UIDatePicker {
         picker.minimumDate = minDate
         picker.tintColor = tintColor
         picker.backgroundColor = backgroundColor
-        
-        if let minuteInterval = minuteInterval {
-            picker.minuteInterval = minuteInterval
-        }
+        picker.minuteInterval = minuteInterval
+        picker.tag = tag
         
         if let date = date {
             picker.date = date
-        }
-        
-        if let countDownDuration = countDownDuration {
-            picker.countDownDuration = countDownDuration
+        } else {
+            let date = Date()
+            picker.date = date
         }
         
         picker.translatesAutoresizingMaskIntoConstraints = tamic

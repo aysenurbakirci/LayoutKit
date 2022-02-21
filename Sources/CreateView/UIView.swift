@@ -80,6 +80,7 @@ public extension UIView {
     func addCornerRadius(radius: CGFloat) {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = radius
+//        clipsToBounds
     }
     
     func addSubviews(_ views: UIView...) {

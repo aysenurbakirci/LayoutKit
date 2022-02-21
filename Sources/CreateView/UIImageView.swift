@@ -30,9 +30,10 @@ public extension UIImageView {
                        isUserInteractionEnabled: Bool = false,
                        backgroundColor: UIColor = .clear,
                        tintColor: UIColor? = nil,
-                       clipsToBounds: Bool = false,
                        isOpaque: Bool = true,
-                       tamic: Bool = true) -> UIImageView {
+                       tamic: Bool = true,
+                       tag: Int = 0) -> UIImageView {
+        
         let imageView = UIImageView()
         
         imageView.image = image
@@ -41,9 +42,9 @@ public extension UIImageView {
         imageView.isUserInteractionEnabled = isUserInteractionEnabled
         imageView.backgroundColor = backgroundColor
         imageView.tintColor = tintColor
-        imageView.clipsToBounds = clipsToBounds
         imageView.isOpaque = isOpaque
         imageView.translatesAutoresizingMaskIntoConstraints = tamic
+        imageView.tag = tag
         
         return imageView
     }

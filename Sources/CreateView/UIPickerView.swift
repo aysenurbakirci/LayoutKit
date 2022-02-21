@@ -20,12 +20,14 @@ public extension UIPickerView {
      */
     static func create(backgroundColor: UIColor = .clear,
                        tintColor: UIColor = .black,
+                       tag: Int = 0,
                        tamic: Bool = true) -> UIPickerView {
         let picker = UIPickerView()
 
         picker.backgroundColor = backgroundColor
         picker.tintColor = tintColor
         picker.translatesAutoresizingMaskIntoConstraints = tamic
+        picker.tag = tag
         
         return picker
     }
