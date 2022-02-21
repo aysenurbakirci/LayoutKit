@@ -22,8 +22,7 @@ public extension UIDatePicker {
         maxDate: Date = .distantFuture
         minDate: Date = .distantPast
         date: Date? = nil
-        countDownDuration: TimeInterval? = nil
-        tamic: Bool = true
+        tag: Int = 0
      */
     static func create(mode: UIDatePicker.Mode,
                        minuteInterval: Int = 1,
@@ -34,8 +33,7 @@ public extension UIDatePicker {
                        maxDate: Date = .distantFuture,
                        minDate: Date = .distantPast,
                        date: Date? = nil,
-                       tag: Int = 0,
-                       tamic: Bool = true) -> UIDatePicker {
+                       tag: Int = 0) -> UIDatePicker {
         let picker = UIDatePicker()
         
         picker.datePickerMode = mode
@@ -54,8 +52,6 @@ public extension UIDatePicker {
             let date = Date()
             picker.date = date
         }
-        
-        picker.translatesAutoresizingMaskIntoConstraints = tamic
         
         return picker
     }

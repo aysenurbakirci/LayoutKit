@@ -22,7 +22,7 @@ public extension UISlider {
         maxTrackColor: UIColor = .gray
         thumbColor: UIColor = .black
         isContinuous: Bool = true
-        tamic: Bool = true
+        tag: Int = 0
      
      */
     static func create(currentValue: Float,
@@ -34,7 +34,7 @@ public extension UISlider {
                        maxTrackColor: UIColor = .gray,
                        thumbColor: UIColor = .black,
                        isContinuous: Bool = true,
-                       tamic: Bool = true) -> UISlider {
+                       tag: Int = 0) -> UISlider {
         let slider = UISlider()
         
         slider.value = currentValue
@@ -46,7 +46,7 @@ public extension UISlider {
         slider.maximumTrackTintColor = maxTrackColor
         slider.thumbTintColor = thumbColor
         slider.isContinuous = isContinuous
-        slider.translatesAutoresizingMaskIntoConstraints = tamic
+        slider.tag = tag
         
         return slider
     }

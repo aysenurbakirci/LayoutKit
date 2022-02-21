@@ -20,6 +20,10 @@ public extension UICollectionView {
         backgroundColor: UIColor = .clear
         showHorizontalIndicator: Bool = false
         showVerticalIndicator: Bool = false
+        isScrolling: Bool = true,
+        isPaging: Bool = false,
+        isPrefetching: Bool = true,
+        tag: Int = 0
      
      */
     static func createCollection(layout: UICollectionViewLayout,

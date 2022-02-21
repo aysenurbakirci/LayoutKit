@@ -17,25 +17,38 @@ public extension UISwitch {
         onTintColor: UIColor = .green
         tintColor: UIColor = .lightGray
         isOn: Bool = false
-        tamic: Bool = true
+        tag: Int = 0
      
      */
     static func create(thumbColor: UIColor = .white,
                        onTintColor: UIColor = .green,
                        tintColor: UIColor = .lightGray,
                        isOn: Bool = false,
-                       tamic: Bool = true) -> UISwitch {
+                       tag: Int = 0) -> UISwitch {
         let switchControl = UISwitch()
         
         switchControl.thumbTintColor = thumbColor
         switchControl.onTintColor = onTintColor
         switchControl.tintColor = tintColor
         switchControl.isOn = isOn
-        switchControl.translatesAutoresizingMaskIntoConstraints = tamic
+        switchControl.tag = tag
         
         return switchControl
     }
     
+    /**
+     Create UISwitch
+     This method is available in iOS 14 and later versions.
+     
+        style: UISwitch.Style = .automatic
+        title: String? = nil
+        thumbColor: UIColor = .white
+        onTintColor: UIColor = .green
+        tintColor: UIColor = .lightGray
+        isOn: Bool = false
+        tag: Int = 0
+     
+     */
     @available(iOS 14.0, *)
     static func create(style: UISwitch.Style = .automatic,
                        title: String? = nil,
@@ -43,7 +56,7 @@ public extension UISwitch {
                        onTintColor: UIColor = .green,
                        tintColor: UIColor = .lightGray,
                        isOn: Bool = false,
-                       tamic: Bool = true) -> UISwitch {
+                       tag: Int = 0) -> UISwitch {
         let switchControl = UISwitch()
         
         switchControl.preferredStyle = style
@@ -52,7 +65,7 @@ public extension UISwitch {
         switchControl.onTintColor = onTintColor
         switchControl.tintColor = tintColor
         switchControl.isOn = isOn
-        switchControl.translatesAutoresizingMaskIntoConstraints = tamic
+        switchControl.tag = tag
         
         return switchControl
     }

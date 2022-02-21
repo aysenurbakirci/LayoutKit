@@ -22,7 +22,7 @@ public extension UIStepper {
         autorepeat: Bool = false
         isContinuous: Bool = false
         wraps: Bool = false
-        tamic: Bool = true
+        tag: Int = 0
      
      */
     static func create(currentValue: Double,
@@ -34,7 +34,7 @@ public extension UIStepper {
                        autorepeat: Bool = false,
                        isContinuous: Bool = false,
                        wraps: Bool = false,
-                       tamic: Bool = true) -> UIStepper {
+                       tag: Int = 0) -> UIStepper {
         let stepper = UIStepper()
         
         stepper.value = currentValue
@@ -46,7 +46,7 @@ public extension UIStepper {
         stepper.autorepeat = autorepeat
         stepper.isContinuous = isContinuous
         stepper.wraps = wraps
-        stepper.translatesAutoresizingMaskIntoConstraints = tamic
+        stepper.tag = tag
         
         return stepper
     }

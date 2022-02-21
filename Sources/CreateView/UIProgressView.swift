@@ -13,13 +13,14 @@ public extension UIProgressView {
     /**
      Create UIProgressView
      
-     style: UIProgressView.Style
-     tintColor: UIColor = .black
-     currentProgress: Float = 0.0
-     observedProgress: Progress? = nil
-     progressImage: UIImage? = nil
-     trackImage: UIImage? = nil
-     tamic: Bool = true
+        style: UIProgressView.Style
+        tintColor: UIColor = .black
+        trackTintColor: UIColor = .gray
+        currentProgress: Float = 0.0
+        tag: Int = 0
+        observedProgress: Progress? = nil
+        progressImage: UIImage? = nil
+        trackImage: UIImage? = nil
      
      */
     static func create(style: UIProgressView.Style,
@@ -29,8 +30,7 @@ public extension UIProgressView {
                        tag: Int = 0,
                        observedProgress: Progress? = nil,
                        progressImage: UIImage? = nil,
-                       trackImage: UIImage? = nil,
-                       tamic: Bool = true) -> UIProgressView {
+                       trackImage: UIImage? = nil) -> UIProgressView {
         let progress = UIProgressView()
         
         progress.progressViewStyle = style
@@ -41,7 +41,6 @@ public extension UIProgressView {
         progress.progressImage = progressImage
         progress.trackImage = trackImage
         progress.tag = tag
-        progress.translatesAutoresizingMaskIntoConstraints = tamic
         
         return progress
     }

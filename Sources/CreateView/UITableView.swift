@@ -20,6 +20,7 @@ public extension UITableView {
         footerView: UIView? = nil
         keyboardDismissMode: UIScrollView.KeyboardDismissMode = .interactive
         addCells: [UITableViewCell.Type]
+        tag: Int = 0
      
      */
     static func createTable(style: UITableView.Style,
@@ -28,7 +29,8 @@ public extension UITableView {
                             headerView: UIView? = nil,
                             footerView: UIView? = nil,
                             keyboardDismissMode: UIScrollView.KeyboardDismissMode = .interactive,
-                            addCells: [UITableViewCell.Type]) -> UITableView {
+                            addCells: [UITableViewCell.Type],
+                            tag: Int = 0) -> UITableView {
         let tableView = UITableView(frame: .zero, style: style)
         
         tableView.tableHeaderView = headerView
@@ -37,6 +39,7 @@ public extension UITableView {
         tableView.estimatedRowHeight = estimatedRowHeight
         tableView.backgroundColor = backgroundColor
         tableView.keyboardDismissMode = keyboardDismissMode
+        tableView.tag = tag
         
         addCells.forEach { cell in
             tableView.register(cell.self, forCellReuseIdentifier: cell.reuseIdentifier)

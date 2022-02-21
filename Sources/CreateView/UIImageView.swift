@@ -14,14 +14,13 @@ public extension UIImageView {
      Create UIImageView
      
         image: UIImage
-        highlightedImage: UIImage? = nil,
-        contentMode: ContentMode = .scaleAspectFit,
-        isUserInteractionEnabled: Bool = false,
-        backgroundColor: UIColor? = nil,
-        tintColor: UIColor? = nil,
-        clipsToBounds: Bool = false,
-        isOpaque: Bool = true,
-        tamic: Bool = true
+        highlightedImage: UIImage? = nil
+        contentMode: ContentMode = .scaleAspectFit
+        isUserInteractionEnabled: Bool = false
+        backgroundColor: UIColor? = nil
+        tintColor: UIColor? = nil
+        isOpaque: Bool = true
+        tag: Int = 0
      
      */
     static func create(image: UIImage,
@@ -31,7 +30,6 @@ public extension UIImageView {
                        backgroundColor: UIColor = .clear,
                        tintColor: UIColor? = nil,
                        isOpaque: Bool = true,
-                       tamic: Bool = true,
                        tag: Int = 0) -> UIImageView {
         
         let imageView = UIImageView()
@@ -43,7 +41,6 @@ public extension UIImageView {
         imageView.backgroundColor = backgroundColor
         imageView.tintColor = tintColor
         imageView.isOpaque = isOpaque
-        imageView.translatesAutoresizingMaskIntoConstraints = tamic
         imageView.tag = tag
         
         return imageView

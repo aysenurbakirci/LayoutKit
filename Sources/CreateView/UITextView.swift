@@ -13,25 +13,30 @@ public extension UITextView {
     /**
      Create UITextView
      
-     textColor: UIColor = .black
-     textContainerInset: UIEdgeInsets = .zero
-     isEditable: Bool = true
-     font: UIFont? = nil
-     autocorrectionType: UITextAutocorrectionType = .default
+        textColor: UIColor = .black
+        textContainerInset: UIEdgeInsets = .zero
+        isEditable: Bool = true
+        font: UIFont? = nil
+        autocorrectionType: UITextAutocorrectionType = .default
+        tag: Int = 0
      
      */
     static func create(textColor: UIColor = .black,
                        textContainerInset: UIEdgeInsets = .zero,
                        isEditable: Bool = true,
+                       isSelectable: Bool = true,
                        font: UIFont? = nil,
-                       autocorrectionType: UITextAutocorrectionType = .default) -> UITextView {
+                       autoCorrectionType: UITextAutocorrectionType = .default,
+                       tag: Int = 0) -> UITextView {
         let textView = UITextView()
         
         textView.textContainerInset = textContainerInset
         textView.textColor = textColor
         textView.isEditable = isEditable
+        textView.isSelectable = isSelectable
         textView.font = font
-        textView.autocorrectionType = .default
+        textView.autocorrectionType = autoCorrectionType
+        textView.tag = tag
         
         return textView
     }

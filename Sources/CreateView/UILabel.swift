@@ -22,7 +22,7 @@ public extension UILabel {
         lineBreakMode: NSLineBreakMode? = nil
         isUserInteractionEnabled: Bool = false
         sizeToFit: Bool = true
-        tamic: Bool = true
+        tag: Int = 0
      
      */
     static func create(lblText: String = "",
@@ -34,7 +34,7 @@ public extension UILabel {
                        lineBreakMode: NSLineBreakMode? = nil,
                        isUserInteractionEnabled: Bool = false,
                        sizeToFit: Bool = true,
-                       tamic: Bool = true) -> UILabel {
+                       tag: Int = 0) -> UILabel {
         let label = UILabel()
         
         label.text = lblText
@@ -44,6 +44,7 @@ public extension UILabel {
         label.backgroundColor = backgroundColor
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled
+        label.tag = tag
         
         if let lineBreakMode = lineBreakMode {
             label.lineBreakMode = lineBreakMode
@@ -52,8 +53,6 @@ public extension UILabel {
         if sizeToFit {
             label.sizeToFit()
         }
-        
-        label.translatesAutoresizingMaskIntoConstraints = tamic
         
         return label
     }
@@ -67,9 +66,9 @@ public extension UILabel {
         textColor: UIColor = .black
         numberOfLines: Int = 0
         textAlignment: NSTextAlignment = .left
+        tag: Int = 0,
         isUserInteractionEnabled: Bool = false
         sizeToFit: Bool = true
-        tamic: Bool = true
      
      */
     static func create(attributedText: NSAttributedString,
@@ -80,8 +79,7 @@ public extension UILabel {
                        textAlignment: NSTextAlignment = .left,
                        tag: Int = 0,
                        isUserInteractionEnabled: Bool = false,
-                       sizeToFit: Bool = true,
-                       tamic: Bool = true) -> UILabel {
+                       sizeToFit: Bool = true) -> UILabel {
         let label = UILabel()
         
         label.attributedText = attributedText
@@ -96,8 +94,6 @@ public extension UILabel {
         if sizeToFit {
             label.sizeToFit()
         }
-        
-        label.translatesAutoresizingMaskIntoConstraints = tamic
         
         return label
     }

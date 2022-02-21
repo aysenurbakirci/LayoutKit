@@ -16,20 +16,20 @@ public extension UIView {
         backgroundColor: UIColor? = nil
         alpha: CGFloat = 1.0
         isUserInteractionEnabled: Bool = true
-        tamic: Bool = true
+        tag: Int = 0
      
      */
     static func create(backgroundColor: UIColor? = nil,
                        alpha: CGFloat = 1.0,
                        isUserInteractionEnabled: Bool = true,
-                       tamic: Bool = true) -> UIView {
+                       tag: Int = 0) -> UIView {
 
         let view = UIView()
         
         view.backgroundColor = backgroundColor
         view.alpha = alpha
         view.isUserInteractionEnabled = isUserInteractionEnabled
-        view.translatesAutoresizingMaskIntoConstraints = tamic
+        view.tag = tag
         
         return view
     }
@@ -39,24 +39,30 @@ public extension UIView {
      
         width: CGFloat? = nil
         height: CGFloat? = nil
-        backgroundColor: UIColor? = ni
+        backgroundColor: UIColor? = nil
+        tag: Int = 0
      
      */
     static func createSpacer(width: CGFloat? = nil,
                              height: CGFloat? = nil,
-                             backgroundColor: UIColor? = nil) -> UIView {
+                             backgroundColor: UIColor? = nil,
+                             tag: Int = 0) -> UIView {
         let spacer = UIView()
+        
         if let width = width {
             spacer.widthAnchor
                 .constraint(equalToConstant: width)
                 .isActive = true
         }
+        
         if let height = height {
             spacer.heightAnchor
                 .constraint(equalToConstant: height)
                 .isActive = true
         }
+        
         spacer.backgroundColor = backgroundColor
+        spacer.tag = tag
         
         return spacer
     }
@@ -80,7 +86,6 @@ public extension UIView {
     func addCornerRadius(radius: CGFloat) {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = radius
-//        clipsToBounds
     }
     
     func addSubviews(_ views: UIView...) {

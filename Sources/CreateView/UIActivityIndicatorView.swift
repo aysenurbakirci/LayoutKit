@@ -16,12 +16,11 @@ public extension UIActivityIndicatorView {
         hidesWhenStopped: Bool = true
         color: UIColor = .gray
         backgroundColor: UIColor = .clear
-        alpha: Double = 1.0,
-        contentMode: UIView.ContentMode = .scaleAspectFill,
-        semantic: UISemanticContentAttribute = .unspecified,
-        tag: Int = 0,
-        isOpaque: Bool = false,
-        tamic: Bool = true
+        alpha: Double = 1.0
+        contentMode: UIView.ContentMode = .scaleAspectFill
+        semantic: UISemanticContentAttribute = .unspecified
+        tag: Int = 0
+        isOpaque: Bool = false
      
      */
     static func create(hidesWhenStopped: Bool = true,
@@ -31,8 +30,7 @@ public extension UIActivityIndicatorView {
                        contentMode: UIView.ContentMode = .scaleAspectFill,
                        semantic: UISemanticContentAttribute = .unspecified,
                        tag: Int = 0,
-                       isOpaque: Bool = false,
-                       tamic: Bool = true) -> UIActivityIndicatorView {
+                       isOpaque: Bool = false) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView()
         
         indicator.hidesWhenStopped = hidesWhenStopped
@@ -43,7 +41,6 @@ public extension UIActivityIndicatorView {
         indicator.tag = tag
         indicator.alpha = alpha
         indicator.isOpaque = isOpaque
-        indicator.translatesAutoresizingMaskIntoConstraints = tamic
         
         return indicator
     }
@@ -52,15 +49,14 @@ public extension UIActivityIndicatorView {
      Create UIActivityIndicatorView.
      This method is available in iOS 13 and later versions.
      
-        style: UIActivityIndicatorView.Style,
+        style: UIActivityIndicatorView.Style
         hidesWhenStopped: Bool = true
         color: UIColor = .gray
         backgroundColor: UIColor = .clear
-        alpha: Double = 1.0,
-        contentMode: UIView.ContentMode = .scaleAspectFill,
-        tag: Int = 0,
-        isOpaque: Bool = false,
-        tamic: Bool = true
+        alpha: Double = 1.0
+        contentMode: UIView.ContentMode = .scaleAspectFill
+        tag: Int = 0
+        isOpaque: Bool = false
      
      */
     @available(iOS 13.0, *)
@@ -71,8 +67,7 @@ public extension UIActivityIndicatorView {
                        alpha: Double = 1.0,
                        contentMode: UIView.ContentMode = .scaleAspectFill,
                        tag: Int = 0,
-                       isOpaque: Bool = false,
-                       tamic: Bool = true) -> UIActivityIndicatorView {
+                       isOpaque: Bool = false) -> UIActivityIndicatorView {
         let indicator = UIActivityIndicatorView()
         
         indicator.hidesWhenStopped = hidesWhenStopped
@@ -83,7 +78,6 @@ public extension UIActivityIndicatorView {
         indicator.tag = tag
         indicator.alpha = alpha
         indicator.isOpaque = isOpaque
-        indicator.translatesAutoresizingMaskIntoConstraints = tamic
         
         return indicator
     }

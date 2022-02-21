@@ -21,14 +21,14 @@ public extension UIButton {
         numberOfLines: Int = 0
         backgroundColor: UIColor = .clear
         backgroundImage: UIImage? = nil
-        tamic: Bool = true
         sizeToFit: Bool = true
-        isOpaque: Bool = false,
+        isOpaque: Bool = false
         horizontalAlignment: UIControl.ContentHorizontalAlignment = .center
         verticalAlignment: UIControl.ContentVerticalAlignment = .center
-        target: Any? = nil,
-        selector: Selector,
+        target: Any? = nil
+        selector: Selector
         touchEvent: UIControl.Event
+        tag: Int = 0
      
      */
     static func create(type: ButtonType = .system,
@@ -39,14 +39,14 @@ public extension UIButton {
                        numberOfLines: Int = 0,
                        backgroundColor: UIColor = .clear,
                        backgroundImage: UIImage? = nil,
-                       tamic: Bool = true,
                        sizeToFit: Bool = true,
                        isOpaque: Bool = false,
                        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
                        verticalAlignment: UIControl.ContentVerticalAlignment = .center,
                        target: Any? = nil,
                        selector: Selector,
-                       touchEvent: UIControl.Event) -> UIButton {
+                       touchEvent: UIControl.Event,
+                       tag: Int = 0) -> UIButton {
         
         let button = UIButton(type: type)
         
@@ -59,8 +59,7 @@ public extension UIButton {
         button.contentVerticalAlignment = verticalAlignment
         button.backgroundColor = backgroundColor
         button.setBackgroundImage(backgroundImage, for: .normal)
-        button.tag = 0
-        button.translatesAutoresizingMaskIntoConstraints = tamic
+        button.tag = tag
         button.isOpaque = isOpaque
         button.addTarget(target, action: selector, for: touchEvent)
         
@@ -83,11 +82,11 @@ public extension UIButton {
         numberOfLines: Int = 0
         backgroundColor: UIColor = .clear
         backgroundImage: UIImage? = nil
-        role: Role,
-        menu: UIMenu? = nil,
-        tamic: Bool = true
+        role: Role
+        menu: UIMenu? = nil
         sizeToFit: Bool = true
-        isOpaque: Bool = false,
+        isOpaque: Bool = false
+        tag: Int = 0,
         horizontalAlignment: UIControl.ContentHorizontalAlignment = .center
         verticalAlignment: UIControl.ContentVerticalAlignment = .center
      
@@ -103,9 +102,9 @@ public extension UIButton {
                        backgroundImage: UIImage? = nil,
                        role: Role,
                        menu: UIMenu? = nil,
-                       tamic: Bool = true,
                        sizeToFit: Bool = true,
                        isOpaque: Bool = false,
+                       tag: Int = 0,
                        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
                        verticalAlignment: UIControl.ContentVerticalAlignment = .center) -> UIButton {
         
@@ -120,8 +119,7 @@ public extension UIButton {
         button.contentVerticalAlignment = verticalAlignment
         button.backgroundColor = backgroundColor
         button.setBackgroundImage(backgroundImage, for: .normal)
-        button.tag = 0
-        button.translatesAutoresizingMaskIntoConstraints = tamic
+        button.tag = tag
         button.menu = menu
         button.role = role
         button.isOpaque = isOpaque

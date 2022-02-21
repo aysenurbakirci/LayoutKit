@@ -24,8 +24,7 @@ public extension UISearchBar {
         autocorrectionType: UITextAutocorrectionType = .no
         enablesReturnKeyAutomatically: Bool = true
         returnKeyType: UIReturnKeyType = .default
-        tamic: Bool = true
-     
+        tag: Int = 0
      */
     static func create(style: UISearchBar.Style,
                        placeholder: String = "Search",
@@ -38,7 +37,7 @@ public extension UISearchBar {
                        autocorrectionType: UITextAutocorrectionType = .no,
                        enablesReturnKeyAutomatically: Bool = true,
                        returnKeyType: UIReturnKeyType = .default,
-                       tamic: Bool = true) -> UISearchBar {
+                       tag: Int = 0) -> UISearchBar {
         let searchBar = UISearchBar()
 
         searchBar.searchBarStyle = style
@@ -52,7 +51,7 @@ public extension UISearchBar {
         searchBar.autocorrectionType = autocorrectionType
         searchBar.enablesReturnKeyAutomatically = enablesReturnKeyAutomatically
         searchBar.returnKeyType = returnKeyType
-        searchBar.translatesAutoresizingMaskIntoConstraints = tamic
+        searchBar.tag = tag
         
         return searchBar
     }

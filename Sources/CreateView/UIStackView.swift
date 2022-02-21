@@ -20,7 +20,7 @@ public extension UIStackView {
         spacing: CGFloat = 1.0
         backgrounColor: UIColor = .clear
         isBaselineRelativeArrangement: Bool = false
-        tamic: Bool = true
+        tag: Int = 0
      
      */
     static func create(subviews: [UIView],
@@ -30,7 +30,7 @@ public extension UIStackView {
                        spacing: CGFloat = 1.0,
                        backgrounColor: UIColor = .clear,
                        isBaselineRelativeArrangement: Bool = false,
-                       tamic: Bool = true) -> UIStackView {
+                       tag: Int = 0) -> UIStackView {
         let stack = UIStackView()
         
         subviews.forEach { subview in
@@ -43,7 +43,7 @@ public extension UIStackView {
         stack.spacing = spacing
         stack.backgroundColor = backgrounColor
         stack.isBaselineRelativeArrangement = isBaselineRelativeArrangement
-        stack.translatesAutoresizingMaskIntoConstraints = tamic
+        stack.tag = tag
         
         return stack
     }

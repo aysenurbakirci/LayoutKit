@@ -17,8 +17,7 @@ public extension UIBarButtonItem {
         target: Any? = nil
         tintColor: UIColor = .black
         action: Selector? = nil
-        tag: Int = 0,
-        isSpringLoaded: Bool = false
+        tag: Int = 0
      
      */
     static func create(buttonItem: SystemItem,
@@ -40,14 +39,13 @@ public extension UIBarButtonItem {
      Create UIBarButtonItem with title.
      
         title: String? = nil
-        style: Style,
-        image: UIImage? = nil,
-        landscapeImage: UIImage? = nil,
-        target: Any? = nil,
-        tintColor: UIColor = .black,
-        action: Selector? = nil,
-        tag: Int = 0,
-        isSpringLoaded: Bool = false
+        style: Style
+        image: UIImage? = nil
+        landscapeImage: UIImage? = nil
+        target: Any? = nil
+        tintColor: UIColor = .black
+        action: Selector? = nil
+        tag: Int = 0
      
      */
 
@@ -80,8 +78,7 @@ public extension UIBarButtonItem {
         primaryAction: UIAction? = nil
         menu: UIMenu? = nil
         tintColor: UIColor = .black
-        tag: Int = 0,
-        isSpringLoaded: Bool = false)
+        tag: Int = 0
      
      */
     @available(iOS 14.0, *)
@@ -109,9 +106,8 @@ public extension UIBarButtonItem {
         tintColor: UIColor = .black
         primaryAction: UIAction? = nil
         menu: UIMenu? = nil
-        landscapeImage: UIImage? = nil,
-        tag: Int = 0,
-        isSpringLoaded: Bool = false
+        landscapeImage: UIImage? = nil
+        tag: Int = 0
      
      */
     @available(iOS 14.0, *)

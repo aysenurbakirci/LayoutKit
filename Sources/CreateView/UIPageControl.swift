@@ -19,7 +19,9 @@ public extension UIPageControl {
         currentIndicatorColor: UIColor = .black
         backgroundColor: UIColor = .clear
         hidesForSinglePage: Bool = true
-        tamic: Bool = true
+        tag: Int = 0,
+        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
+        verticalAlignment: UIControl.ContentVerticalAlignment = .center
      
      */
     static func create(currentPage: Int,
@@ -28,7 +30,6 @@ public extension UIPageControl {
                        currentIndicatorColor: UIColor = .black,
                        backgroundColor: UIColor = .clear,
                        hidesForSinglePage: Bool = true,
-                       tamic: Bool = true,
                        tag: Int = 0,
                        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
                        verticalAlignment: UIControl.ContentVerticalAlignment = .center) -> UIPageControl {
@@ -40,7 +41,6 @@ public extension UIPageControl {
         pageControl.currentPageIndicatorTintColor = currentIndicatorColor
         pageControl.backgroundColor = backgroundColor
         pageControl.hidesForSinglePage = hidesForSinglePage
-        pageControl.translatesAutoresizingMaskIntoConstraints = tamic
         pageControl.contentHorizontalAlignment = horizontalAlignment
         pageControl.contentVerticalAlignment = verticalAlignment
         pageControl.tag = tag
