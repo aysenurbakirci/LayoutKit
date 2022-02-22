@@ -43,9 +43,6 @@ public extension UIButton {
                        isOpaque: Bool = false,
                        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
                        verticalAlignment: UIControl.ContentVerticalAlignment = .center,
-                       target: Any? = nil,
-                       selector: Selector,
-                       touchEvent: UIControl.Event,
                        tag: Int = 0) -> UIButton {
         
         let button = UIButton(type: type)
@@ -61,7 +58,6 @@ public extension UIButton {
         button.setBackgroundImage(backgroundImage, for: .normal)
         button.tag = tag
         button.isOpaque = isOpaque
-        button.addTarget(target, action: selector, for: touchEvent)
         
         if sizeToFit {
             button.sizeToFit()
