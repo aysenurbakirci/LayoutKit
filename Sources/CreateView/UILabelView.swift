@@ -1,17 +1,18 @@
 //
-//  UILabel.swift
+//  File.swift
 //  
 //
-//  Created by Ayşenur Bakırcı on 7.02.2022.
+//  Created by Ayşe Nur Bakırcı on 23.02.2022.
 //
 
+import Foundation
 import UIKit
 
 // MARK: - Create UILabel
-public extension UILabel {
+public extension UILabelView {
     
     /**
-     Create UILabel.
+     Create UILabelView.
      
         lblText: String = ""
         font: UIFont? = nil
@@ -19,6 +20,7 @@ public extension UILabel {
         textColor: UIColor = .black
         numberOfLines: Int = 0
         textAlignment: NSTextAlignment = .left
+        padding: Double = 0.0
         lineBreakMode: NSLineBreakMode? = nil
         isUserInteractionEnabled: Bool = false
         sizeToFit: Bool = true
@@ -31,11 +33,12 @@ public extension UILabel {
                        textColor: UIColor = .black,
                        numberOfLines: Int = 0,
                        textAlignment: NSTextAlignment = .left,
+                       padding: Double = 0.0,
                        lineBreakMode: NSLineBreakMode? = nil,
                        isUserInteractionEnabled: Bool = false,
                        sizeToFit: Bool = true,
-                       tag: Int = 0) -> UILabel {
-        let label = UILabel()
+                       tag: Int = 0) -> UILabelView {
+        let label = UILabelView()
         
         label.text = lblText
         label.textAlignment = textAlignment
@@ -45,6 +48,11 @@ public extension UILabel {
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled
         label.tag = tag
+        
+        label.paddingLeft = padding
+        label.paddingRight = padding
+        label.paddingTop = padding
+        label.paddingBottom = padding
         
         if let lineBreakMode = lineBreakMode {
             label.lineBreakMode = lineBreakMode
@@ -58,7 +66,7 @@ public extension UILabel {
     }
 
     /**
-     Create UILabel.
+     Create UILabelView.
      
         attributedText: NSAttributedString
         font: UIFont? = nil
@@ -66,6 +74,7 @@ public extension UILabel {
         textColor: UIColor = .black
         numberOfLines: Int = 0
         textAlignment: NSTextAlignment = .left
+        padding: Double = 0.0
         tag: Int = 0,
         isUserInteractionEnabled: Bool = false
         sizeToFit: Bool = true
@@ -77,10 +86,11 @@ public extension UILabel {
                        textColor: UIColor = .black,
                        numberOfLines: Int = 0,
                        textAlignment: NSTextAlignment = .left,
+                       padding: Double = 0.0,
                        tag: Int = 0,
                        isUserInteractionEnabled: Bool = false,
-                       sizeToFit: Bool = true) -> UILabel {
-        let label = UILabel()
+                       sizeToFit: Bool = true) -> UILabelView {
+        let label = UILabelView()
         
         label.attributedText = attributedText
         label.textAlignment = textAlignment
@@ -90,6 +100,11 @@ public extension UILabel {
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled
         label.tag = tag
+        
+        label.paddingLeft = padding
+        label.paddingRight = padding
+        label.paddingTop = padding
+        label.paddingBottom = padding
         
         if sizeToFit {
             label.sizeToFit()
