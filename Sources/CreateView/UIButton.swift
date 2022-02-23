@@ -17,6 +17,7 @@ public extension UIButton {
         title: String = ""
         image: UIImage? = nil
         titleColor: UIColor = .black
+        tintColor: UIColor = .black
         font: UIFont? = nil
         numberOfLines: Int = 0
         backgroundColor: UIColor = .clear
@@ -35,6 +36,7 @@ public extension UIButton {
                        title: String = "",
                        image: UIImage? = nil,
                        titleColor: UIColor = .black,
+                       tintColor: UIColor = .black,
                        font: UIFont? = nil,
                        numberOfLines: Int = 0,
                        backgroundColor: UIColor = .clear,
@@ -50,6 +52,7 @@ public extension UIButton {
         button.setTitle(title, for: .normal)
         button.setImage(image, for: .normal)
         button.setTitleColor(titleColor, for: .normal)
+        button.tintColor = tintColor
         button.titleLabel?.numberOfLines = numberOfLines
         button.titleLabel?.font = font
         button.contentHorizontalAlignment = horizontalAlignment
@@ -74,6 +77,7 @@ public extension UIButton {
         title: String = ""
         image: UIImage? = nil
         titleColor: UIColor = .black
+        tintColor: UIColor = .black
         font: UIFont? = nil
         numberOfLines: Int = 0
         backgroundColor: UIColor = .clear
@@ -92,6 +96,7 @@ public extension UIButton {
                        title: String = "",
                        image: UIImage? = nil,
                        titleColor: UIColor = .black,
+                       tintColor: UIColor = .black,
                        font: UIFont? = nil,
                        numberOfLines: Int = 0,
                        backgroundColor: UIColor = .clear,
@@ -111,6 +116,7 @@ public extension UIButton {
         button.setTitleColor(titleColor, for: .normal)
         button.titleLabel?.numberOfLines = numberOfLines
         button.titleLabel?.font = font
+        button.tintColor = tintColor
         button.contentHorizontalAlignment = horizontalAlignment
         button.contentVerticalAlignment = verticalAlignment
         button.backgroundColor = backgroundColor
