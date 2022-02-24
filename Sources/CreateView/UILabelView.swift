@@ -20,7 +20,6 @@ public extension UILabelView {
         textColor: UIColor = .black
         numberOfLines: Int = 0
         textAlignment: NSTextAlignment = .left
-        padding: Double = 0.0
         lineBreakMode: NSLineBreakMode? = nil
         isUserInteractionEnabled: Bool = false
         sizeToFit: Bool = true
@@ -33,7 +32,6 @@ public extension UILabelView {
                        textColor: UIColor = .black,
                        numberOfLines: Int = 0,
                        textAlignment: NSTextAlignment = .left,
-                       padding: Double = 0.0,
                        lineBreakMode: NSLineBreakMode? = nil,
                        isUserInteractionEnabled: Bool = false,
                        sizeToFit: Bool = true,
@@ -48,11 +46,6 @@ public extension UILabelView {
         label.textColor = textColor
         label.isUserInteractionEnabled = isUserInteractionEnabled
         label.tag = tag
-        
-        label.paddingLeft = padding
-        label.paddingRight = padding
-        label.paddingTop = padding
-        label.paddingBottom = padding
         
         if let lineBreakMode = lineBreakMode {
             label.lineBreakMode = lineBreakMode
@@ -86,7 +79,6 @@ public extension UILabelView {
                        textColor: UIColor = .black,
                        numberOfLines: Int = 0,
                        textAlignment: NSTextAlignment = .left,
-                       padding: Double = 0.0,
                        tag: Int = 0,
                        isUserInteractionEnabled: Bool = false,
                        sizeToFit: Bool = true) -> UILabelView {
@@ -101,15 +93,17 @@ public extension UILabelView {
         label.isUserInteractionEnabled = isUserInteractionEnabled
         label.tag = tag
         
-        label.paddingLeft = padding
-        label.paddingRight = padding
-        label.paddingTop = padding
-        label.paddingBottom = padding
-        
         if sizeToFit {
             label.sizeToFit()
         }
         
         return label
+    }
+    
+    func addTextPadding(top: Double = 0.0, left: Double = 0.0, bottom: Double = 0.0, right: Double = 0.0) {
+        self.paddingLeft = left
+        self.paddingRight = right
+        self.paddingTop = top
+        self.paddingBottom = bottom
     }
 }
