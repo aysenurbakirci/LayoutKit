@@ -49,4 +49,24 @@ public extension UITextField {
         
         return textField
     }
+    
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: .init(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: .init(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
+    }
+    
+    func setBottomLine(color: UIColor = .black) {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
+        bottomLine.backgroundColor = color.cgColor
+        self.borderStyle = .none
+        self.layer.addSublayer(bottomLine)
+    }
 }
