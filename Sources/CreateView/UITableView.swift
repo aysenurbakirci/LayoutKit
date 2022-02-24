@@ -48,3 +48,13 @@ public extension UITableView {
         return tableView
     }
 }
+
+public extension UITableView {
+    
+    func dequeue<T: UITableViewCell>(for indexPath: IndexPath) -> T {
+        guard let cell = self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Can not deque cell with identifier \(T.reuseIdentifier) from tableView \(self)")
+        }
+        return cell
+    }
+}

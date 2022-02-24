@@ -74,6 +74,9 @@ extension UICollectionView {
      Dequeue UICollectionViewCell
      */
     func dequeue<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
+        guard let cell = self.dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Can not deque cell with identifier \(T.reuseIdentifier) from tableView \(self)")
+        }
+        return cell
     }
  }
