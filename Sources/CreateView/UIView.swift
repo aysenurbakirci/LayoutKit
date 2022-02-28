@@ -11,13 +11,7 @@ import UIKit
 public extension UIView {
     
     /**
-     Create UIView
-     
-        backgroundColor: UIColor? = nil
-        alpha: CGFloat = 1.0
-        isUserInteractionEnabled: Bool = true
-        tag: Int = 0
-     
+     Create UIView.
      */
     static func create(backgroundColor: UIColor? = nil,
                        alpha: CGFloat = 1.0,
@@ -35,13 +29,7 @@ public extension UIView {
     }
     
     /**
-     Create Spacer view
-     
-        width: CGFloat? = nil
-        height: CGFloat? = nil
-        backgroundColor: UIColor? = nil
-        tag: Int = 0
-     
+     Create Spacer view.
      */
     static func createSpacer(width: CGFloat? = nil,
                              height: CGFloat? = nil,

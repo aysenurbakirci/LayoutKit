@@ -11,19 +11,7 @@ import UIKit
 public extension UIStepper {
     
     /**
-     Create UIStepper
-     
-        currentValue: Double
-        minValue: Double
-        maxValue: Double
-        stepValue: Double
-        tintColor: UIColor = .black
-        backgroundColor: UIColor = .clear
-        autorepeat: Bool = false
-        isContinuous: Bool = false
-        wraps: Bool = false
-        tag: Int = 0
-     
+     Create UIStepper.
      */
     static func create(currentValue: Double,
                        minValue: Double,

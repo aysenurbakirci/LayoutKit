@@ -11,19 +11,7 @@ import UIKit
 public extension UIScrollView {
     
     /**
-     Create UIScrollView
-     
-        indicatorStyle: UIScrollView.IndicatorStyle
-        contentSize: CGSize = .zero
-        offset: CGPoint? = nil
-        inset: UIEdgeInsets? = nil
-        isPagging: Bool = false
-        topScroll: Bool = false
-        bounces: Bool = false
-        showHorizontalIndicator: Bool = true
-        showVerticalIndicator: Bool = true
-        tag: Int = 0
-     
+     Create UIScrollView.
      */
     static func create(indicatorStyle: UIScrollView.IndicatorStyle,
                        contentSize: CGSize = .zero,

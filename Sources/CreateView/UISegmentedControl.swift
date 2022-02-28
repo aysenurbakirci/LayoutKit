@@ -11,13 +11,7 @@ import UIKit
 public extension UISegmentedControl {
     
     /**
-     Create UISegmentedControl
-     
-        segmentItems: [String]
-        selectedIndex: Int = 0
-        tintColor: UIColor = .blue
-        backgroundColor: UIColor = .clear
-        tag: Int = 0
+     Create UISegmentedControl.
      */
     static func create(segmentItems: [String],
                        selectedIndex: Int = 0,
@@ -41,13 +35,6 @@ public extension UISegmentedControl {
     /**
      Create UISegmentedControl.
      This method is available in iOS 13 and later versions.
-     
-        segmentItems: [String]
-        selectedIndex: Int = 0
-        selectedSegmentColor: UIColor = .blue,
-        tintColor: UIColor = .blue
-        backgroundColor: UIColor = .clear
-        tag: Int = 0
      */
     @available(iOS 13.0, *)
     static func create(segmentItems: [String],

@@ -11,12 +11,7 @@ import UIKit
 public extension UIAlertAction {
     
     /**
-     Create UIAlertAction
-     
-        title: String? = nil
-        style: Style = .default
-        handler: ((UIAlertAction) -> ())? = nil
-     
+     Create UIAlertAction.
      */
     static func createAction(title: String? = nil,
                              style: Style = .default,

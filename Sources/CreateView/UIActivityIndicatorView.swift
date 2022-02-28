@@ -11,17 +11,7 @@ import UIKit
 public extension UIActivityIndicatorView {
     
     /**
-     Create UIActivityIndicatorView
-     
-        hidesWhenStopped: Bool = true
-        color: UIColor = .gray
-        backgroundColor: UIColor = .clear
-        alpha: Double = 1.0
-        contentMode: UIView.ContentMode = .scaleAspectFill
-        semantic: UISemanticContentAttribute = .unspecified
-        tag: Int = 0
-        isOpaque: Bool = false
-     
+     Create UIActivityIndicatorView.
      */
     static func create(hidesWhenStopped: Bool = true,
                        color: UIColor = .gray,
@@ -48,16 +38,6 @@ public extension UIActivityIndicatorView {
     /**
      Create UIActivityIndicatorView.
      This method is available in iOS 13 and later versions.
-     
-        style: UIActivityIndicatorView.Style
-        hidesWhenStopped: Bool = true
-        color: UIColor = .gray
-        backgroundColor: UIColor = .clear
-        alpha: Double = 1.0
-        contentMode: UIView.ContentMode = .scaleAspectFill
-        tag: Int = 0
-        isOpaque: Bool = false
-     
      */
     @available(iOS 13.0, *)
     static func create(style: UIActivityIndicatorView.Style,

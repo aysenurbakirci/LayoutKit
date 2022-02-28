@@ -13,18 +13,6 @@ public extension UILabelView {
     
     /**
      Create UILabelView.
-     
-        lblText: String = ""
-        font: UIFont? = nil
-        backgroundColor: UIColor = .clear
-        textColor: UIColor = .black
-        numberOfLines: Int = 0
-        textAlignment: NSTextAlignment = .left
-        lineBreakMode: NSLineBreakMode? = nil
-        isUserInteractionEnabled: Bool = false
-        sizeToFit: Bool = true
-        tag: Int = 0
-     
      */
     static func create(lblText: String = "",
                        font: UIFont? = nil,
@@ -60,18 +48,6 @@ public extension UILabelView {
 
     /**
      Create UILabelView.
-     
-        attributedText: NSAttributedString
-        font: UIFont? = nil
-        backgroundColor: UIColor = .clear
-        textColor: UIColor = .black
-        numberOfLines: Int = 0
-        textAlignment: NSTextAlignment = .left
-        padding: Double = 0.0
-        tag: Int = 0,
-        isUserInteractionEnabled: Bool = false
-        sizeToFit: Bool = true
-     
      */
     static func create(attributedText: NSAttributedString,
                        font: UIFont? = nil,

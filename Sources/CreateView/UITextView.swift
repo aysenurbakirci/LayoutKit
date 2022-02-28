@@ -11,15 +11,7 @@ import UIKit
 public extension UITextView {
     
     /**
-     Create UITextView
-     
-        textColor: UIColor = .black
-        textContainerInset: UIEdgeInsets = .zero
-        isEditable: Bool = true
-        font: UIFont? = nil
-        autocorrectionType: UITextAutocorrectionType = .default
-        tag: Int = 0
-     
+     Create UITextView.
      */
     static func create(textColor: UIColor = .black,
                        textContainerInset: UIEdgeInsets = .zero,

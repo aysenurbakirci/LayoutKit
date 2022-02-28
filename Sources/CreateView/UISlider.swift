@@ -11,19 +11,7 @@ import UIKit
 public extension UISlider {
     
     /**
-     Create UISlider
-     
-        currentValue: Float
-        minValue: Float
-        maxValue: Float
-        minValueImage: UIImage? = nil
-        maxValueImage: UIImage? = nil
-        minTrackColor: UIColor = .black
-        maxTrackColor: UIColor = .gray
-        thumbColor: UIColor = .black
-        isContinuous: Bool = true
-        tag: Int = 0
-     
+     Create UISlider.
      */
     static func create(currentValue: Float,
                        minValue: Float,

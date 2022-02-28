@@ -12,17 +12,6 @@ public extension UIDatePicker {
     
     /**
      Create UIDatePicker.
-     
-        mode: UIDatePicker.Mode
-        minuteInterval: Int? = nil
-        tintColor: UIColor = .black
-        backgroundColor: UIColor = .clear
-        locale: Locale = .current
-        timeZone: TimeZone = .current
-        maxDate: Date = .distantFuture
-        minDate: Date = .distantPast
-        date: Date? = nil
-        tag: Int = 0
      */
     static func create(mode: UIDatePicker.Mode,
                        minuteInterval: Int = 1,

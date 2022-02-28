@@ -12,15 +12,6 @@ public extension UICollectionViewFlowLayout {
     
     /**
      Create UICollectionViewFlowLayout
-     
-        itemSize: CGSize
-        headerSize: CGSize = .zero
-        footerSize: CGSize = .zero
-        scrollDirection: UICollectionView.ScrollDirection
-        interItemSpacing: CGFloat = .leastNormalMagnitude
-        lineSpacing: CGFloat = .leastNormalMagnitude
-        sectionInset: UIEdgeInsets = .zero
-     
      */
     static func create(itemSize: CGSize,
                        headerSize: CGSize = .zero,

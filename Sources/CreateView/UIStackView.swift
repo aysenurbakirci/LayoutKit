@@ -11,17 +11,7 @@ import UIKit
 public extension UIStackView {
     
     /**
-     Create UIStackView
-     
-        subviews: [UIView]
-        axis: NSLayoutConstraint.Axis
-        distribution: UIStackView.Distribution
-        alignment: UIStackView.Alignment
-        spacing: CGFloat = 1.0
-        backgrounColor: UIColor = .clear
-        isBaselineRelativeArrangement: Bool = false
-        tag: Int = 0
-     
+     Create UIStackView.
      */
     static func create(subviews: [UIView],
                        axis: NSLayoutConstraint.Axis,

@@ -11,17 +11,7 @@ import UIKit
 public extension UIProgressView {
     
     /**
-     Create UIProgressView
-     
-        style: UIProgressView.Style
-        tintColor: UIColor = .black
-        trackTintColor: UIColor = .gray
-        currentProgress: Float = 0.0
-        tag: Int = 0
-        observedProgress: Progress? = nil
-        progressImage: UIImage? = nil
-        trackImage: UIImage? = nil
-     
+     Create UIProgressView.
      */
     static func create(style: UIProgressView.Style,
                        tintColor: UIColor = .black,

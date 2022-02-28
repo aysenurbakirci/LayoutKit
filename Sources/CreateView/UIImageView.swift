@@ -11,17 +11,7 @@ import UIKit
 public extension UIImageView {
     
     /**
-     Create UIImageView
-     
-        image: UIImage
-        highlightedImage: UIImage? = nil
-        contentMode: ContentMode = .scaleAspectFit
-        isUserInteractionEnabled: Bool = false
-        backgroundColor: UIColor? = nil
-        tintColor: UIColor? = nil
-        isOpaque: Bool = true
-        tag: Int = 0
-     
+     Create UIImageView.
      */
     static func create(image: UIImage,
                        highlightedImage: UIImage? = nil,

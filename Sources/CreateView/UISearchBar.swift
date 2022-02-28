@@ -11,20 +11,7 @@ import UIKit
 public extension UISearchBar {
     
     /**
-     Create UISearchBar
-     
-        style: UISearchBar.Style
-        placeholder: String = "Search"
-        isTranslucent: Bool = false
-        tintColor: UIColor = .black
-        barTintColor: UIColor = .clear
-        backgroundColor: UIColor = .white
-        prompt: String? = nil
-        backgroundImage: UIImage? = nil
-        autocorrectionType: UITextAutocorrectionType = .no
-        enablesReturnKeyAutomatically: Bool = true
-        returnKeyType: UIReturnKeyType = .default
-        tag: Int = 0
+     Create UISearchBar.
      */
     static func create(style: UISearchBar.Style,
                        placeholder: String = "Search",

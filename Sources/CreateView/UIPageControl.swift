@@ -12,17 +12,6 @@ public extension UIPageControl {
     
     /**
      Create UIPageControl.
-     
-        currentPage: Int
-        numberOfPages: Int
-        indicatorColor: UIColor = .gray
-        currentIndicatorColor: UIColor = .black
-        backgroundColor: UIColor = .clear
-        hidesForSinglePage: Bool = true
-        tag: Int = 0,
-        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
-        verticalAlignment: UIControl.ContentVerticalAlignment = .center
-     
      */
     static func create(currentPage: Int,
                        numberOfPages: Int,

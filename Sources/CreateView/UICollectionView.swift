@@ -11,22 +11,9 @@ import UIKit
 public extension UICollectionView {
     
     /**
-     Create UICollectionView
-     
-        layout: UICollectionViewLayout
-        addCells: [UICollectionViewCell.Type]
-        header: UICollectionReusableView.Type? = nil
-        footer: UICollectionReusableView.Type? = nil
-        backgroundColor: UIColor = .clear
-        showHorizontalIndicator: Bool = false
-        showVerticalIndicator: Bool = false
-        isScrolling: Bool = true,
-        isPaging: Bool = false,
-        isPrefetching: Bool = true,
-        tag: Int = 0
-     
+     Create UICollectionView.
      */
-    static func createCollection(layout: UICollectionViewLayout,
+    static func createCollection(layout: UICollectionViewFlowLayout,
                                  addCells: [UICollectionViewCell.Type],
                                  header: UICollectionReusableView.Type? = nil,
                                  footer: UICollectionReusableView.Type? = nil,

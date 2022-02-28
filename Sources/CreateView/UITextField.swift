@@ -11,18 +11,7 @@ import UIKit
 public extension UITextField {
     
     /**
-     Create UITextField
-     
-        placeholder: String = ""
-        textAlignment: NSTextAlignment = .right
-        font: UIFont? = nil
-        textColor: UIColor = .black
-        keyboardType: UIKeyboardType = .default
-        borderStyle: UITextField.BorderStyle = .line
-        isSecureText: Bool = false
-        alpha: Double = 1.0
-        tag: Int = 0
-     
+     Create UITextField.
      */
     static func create(placeholder: String = "",
                        textAlignment: NSTextAlignment = .right,

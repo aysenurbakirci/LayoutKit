@@ -11,18 +11,7 @@ import UIKit
 public extension UITabBar {
     
     /**
-     Create UITabBar
-     
-        items: [UITabBarItem]
-        selectedItem: UITabBarItem
-        tintColor: UIColor? = nil
-        barTintColor: UIColor? = nil
-        unselectedItemTintColor: UIColor? = nil
-        backgroundColor: UIColor? = nil
-        itemSpacing: CGFloat = 0.0
-        isTranslucent: Bool = false
-        tag: Int = 0
-     
+     Create UITabBar.
      */
     static func create(items: [UITabBarItem],
                        selectedItem: UITabBarItem,

@@ -11,17 +11,7 @@ import UIKit
 public extension UITableView {
     
     /**
-     Create UITableView
-     
-        style: UITableView.Style = .plain
-        estimatedRowHeight: CGFloat
-        backgroundColor: UIColor = .clear
-        headerView: UIView? = nil
-        footerView: UIView? = nil
-        keyboardDismissMode: UIScrollView.KeyboardDismissMode = .interactive
-        addCells: [UITableViewCell.Type]
-        tag: Int = 0
-     
+     Create UITableView.
      */
     static func createTable(style: UITableView.Style,
                             estimatedRowHeight: CGFloat,

@@ -12,14 +12,7 @@ import UIKit
 public extension UIAlertController {
     
     /**
-     Create UIAlertController
-     
-        preferredStyle: Style
-        title: String? = nil
-        message: String? = nil
-        buttons: [UIAlertAction]? = nil
-        textFields: [UITextField]? = nil
-     
+     Create UIAlertController.
      */
     static func create(preferredStyle: Style,
                        title: String? = nil,

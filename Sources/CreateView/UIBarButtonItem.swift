@@ -12,13 +12,6 @@ public extension UIBarButtonItem {
     
     /**
      Create UIBarButtonItem with system button items.
-     
-        buttonItem: SystemItem
-        target: Any? = nil
-        tintColor: UIColor = .black
-        action: Selector? = nil
-        tag: Int = 0
-     
      */
     static func create(buttonItem: SystemItem,
                        target: Any? = nil,

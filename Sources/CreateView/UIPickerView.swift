@@ -11,12 +11,7 @@ import UIKit
 public extension UIPickerView {
     
     /**
-     Create UIPickerView
-     
-        backgroundColor: UIColor = .clear
-        tintColor: UIColor = .black
-        tag: Int = 0
-     
+     Create UIPickerView.
      */
     static func create(backgroundColor: UIColor = .clear,
                        tintColor: UIColor = .black,

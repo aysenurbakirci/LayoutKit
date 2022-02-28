@@ -12,25 +12,6 @@ public extension UIButton {
     
     /**
      Create UIButton.
-     
-        type: ButtonType = .system
-        title: String = ""
-        image: UIImage? = nil
-        titleColor: UIColor = .black
-        tintColor: UIColor = .black
-        font: UIFont? = nil
-        numberOfLines: Int = 0
-        backgroundColor: UIColor = .clear
-        backgroundImage: UIImage? = nil
-        sizeToFit: Bool = true
-        isOpaque: Bool = false
-        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center
-        verticalAlignment: UIControl.ContentVerticalAlignment = .center
-        target: Any? = nil
-        selector: Selector
-        touchEvent: UIControl.Event
-        tag: Int = 0
-     
      */
     static func create(type: ButtonType = .system,
                        title: String = "",
@@ -72,24 +53,6 @@ public extension UIButton {
     /**
      Create UIButton.
      This method is available in iOS 14 and later versions.
-     
-        type: ButtonType = .system
-        title: String = ""
-        image: UIImage? = nil
-        titleColor: UIColor = .black
-        tintColor: UIColor = .black
-        font: UIFont? = nil
-        numberOfLines: Int = 0
-        backgroundColor: UIColor = .clear
-        backgroundImage: UIImage? = nil
-        role: Role
-        menu: UIMenu? = nil
-        sizeToFit: Bool = true
-        isOpaque: Bool = false
-        tag: Int = 0,
-        horizontalAlignment: UIControl.ContentHorizontalAlignment = .center
-        verticalAlignment: UIControl.ContentVerticalAlignment = .center
-     
      */
     @available(iOS 14.0, *)
     static func create(type: ButtonType = .system,

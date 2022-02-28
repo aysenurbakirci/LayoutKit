@@ -11,14 +11,7 @@ import UIKit
 public extension UISwitch {
     
     /**
-     Create UISwitch
-     
-        thumbColor: UIColor = .white
-        onTintColor: UIColor = .green
-        tintColor: UIColor = .lightGray
-        isOn: Bool = false
-        tag: Int = 0
-     
+     Create UISwitch.
      */
     static func create(thumbColor: UIColor = .white,
                        onTintColor: UIColor = .green,
@@ -37,17 +30,8 @@ public extension UISwitch {
     }
     
     /**
-     Create UISwitch
+     Create UISwitch.
      This method is available in iOS 14 and later versions.
-     
-        style: UISwitch.Style = .automatic
-        title: String? = nil
-        thumbColor: UIColor = .white
-        onTintColor: UIColor = .green
-        tintColor: UIColor = .lightGray
-        isOn: Bool = false
-        tag: Int = 0
-     
      */
     @available(iOS 14.0, *)
     static func create(style: UISwitch.Style = .automatic,
