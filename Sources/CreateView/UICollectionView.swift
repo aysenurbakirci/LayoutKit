@@ -14,9 +14,6 @@ public extension UICollectionView {
      Create UICollectionView.
      */
     static func createCollection(layout: UICollectionViewFlowLayout,
-                                 addCells: [UICollectionViewCell.Type],
-                                 header: UICollectionReusableView.Type? = nil,
-                                 footer: UICollectionReusableView.Type? = nil,
                                  backgroundColor: UIColor = .clear,
                                  showHorizontalIndicator: Bool = false,
                                  showVerticalIndicator: Bool = false,
@@ -34,22 +31,6 @@ public extension UICollectionView {
         collectionView.isPrefetchingEnabled = isPrefetching
         collectionView.tag = tag
         
-        addCells.forEach { cellType in
-            collectionView.register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
-        }
-        
-        if let header = header {
-            collectionView.register(header.self,
-                                    forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                    withReuseIdentifier: header.reuseIdentifier)
-        }
-        
-        if let footer = footer {
-            collectionView.register(footer.self,
-                                    forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-                                    withReuseIdentifier: footer.reuseIdentifier)
-        }
-        
         return collectionView
     }
 }
@@ -62,7 +43,7 @@ public extension UICollectionView {
      */
     func dequeue<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
-            fatalError("Can not deque cell with identifier \(T.reuseIdentifier) from tableView \(self)")
+            fatalError("Can not deque cell with identifier \(T.reuseIdentifier) from collectionView \(self)")
         }
         return cell
     }
