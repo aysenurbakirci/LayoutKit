@@ -55,7 +55,7 @@ public extension UICollectionView {
 }
 
 //MARK: - UICollectionView dequeue cell
-extension UICollectionView {
+public extension UICollectionView {
     
     /**
      Dequeue UICollectionViewCell
@@ -66,4 +66,4 @@ extension UICollectionView {
         }
         return cell
     }
- }
+}
