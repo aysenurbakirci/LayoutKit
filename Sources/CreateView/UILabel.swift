@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UILabel.swift
 //  
 //
 //  Created by Ayşe Nur Bakırcı on 23.02.2022.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // MARK: - Create UILabel
-public extension UILabelView {
+public extension UILabel {
     
     /**
      Create UILabelView.
@@ -23,8 +23,8 @@ public extension UILabelView {
                        lineBreakMode: NSLineBreakMode? = nil,
                        isUserInteractionEnabled: Bool = false,
                        sizeToFit: Bool = true,
-                       tag: Int = 0) -> UILabelView {
-        let label = UILabelView()
+                       tag: Int = 0) -> UILabel {
+        let label = UILabel()
         
         label.text = lblText
         label.textAlignment = textAlignment
@@ -57,8 +57,8 @@ public extension UILabelView {
                        textAlignment: NSTextAlignment = .left,
                        tag: Int = 0,
                        isUserInteractionEnabled: Bool = false,
-                       sizeToFit: Bool = true) -> UILabelView {
-        let label = UILabelView()
+                       sizeToFit: Bool = true) -> UILabel {
+        let label = UILabel()
         
         label.attributedText = attributedText
         label.textAlignment = textAlignment
@@ -74,12 +74,5 @@ public extension UILabelView {
         }
         
         return label
-    }
-    
-    func addTextPadding(top: Double = 0.0, left: Double = 0.0, bottom: Double = 0.0, right: Double = 0.0) {
-        self.paddingLeft = left
-        self.paddingRight = right
-        self.paddingTop = top
-        self.paddingBottom = bottom
     }
 }
