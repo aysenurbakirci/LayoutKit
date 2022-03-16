@@ -14,6 +14,7 @@ public extension UIImageView {
      Create UIImageView.
      */
     static func create(image: UIImage,
+                       frame: CGRect? = nil,
                        highlightedImage: UIImage? = nil,
                        contentMode: ContentMode = .scaleAspectFit,
                        isUserInteractionEnabled: Bool = false,
@@ -25,6 +26,11 @@ public extension UIImageView {
         let imageView = UIImageView()
         
         imageView.image = image
+        
+        if let frame = frame {
+            imageView.frame = frame
+        }
+        
         imageView.highlightedImage = highlightedImage
         imageView.contentMode = contentMode
         imageView.isUserInteractionEnabled = isUserInteractionEnabled
